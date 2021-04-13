@@ -1,0 +1,26 @@
+{
+  "id": "93c0281c-0f82-41de-b157-4a6c96e36590",
+  "name": "CarRental",
+  "publisher": "Default publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 60000
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://CarRental.com/help/",
+  "showMyCode": true,
+  "runtime": "3.0"
+}
