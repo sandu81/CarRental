@@ -1,4 +1,4 @@
-page 52003 "CR Car Type List"
+page 52003 "CR Car Types"
 {
     PageType = List;
     ApplicationArea = All;
