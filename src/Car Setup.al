@@ -1,30 +1,27 @@
-table 52003 "CR Brand"
+table 52000 "CR Car Setup"
 {
-    Caption = 'Brand';
+    Caption = 'Car Setup';
     DataClassification = ToBeClassified;
 
     fields
     {
-        field(10; Code; Code[10])
+        field(10; "Primary Key"; Code[10])
         {
-            Caption = 'Code';
             DataClassification = ToBeClassified;
-
         }
-        field(20; Name; Text[100])
+        field(20; "Car Nos."; Code[10])
         {
-            Caption = 'Name';
             DataClassification = ToBeClassified;
+            TableRelation = "No. Series";
         }
     }
 
     keys
     {
-        key(PK; Code)
+        key(PK; "Primary Key")
         {
             Clustered = true;
         }
     }
-
 
 }

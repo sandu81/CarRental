@@ -1,93 +1,120 @@
 table 52001 "CR Car"
 {
-    CaptionML = ENU = 'Car';
+    Caption = 'Car';
     DataClassification = ToBeClassified;
+    LookupPageId = "CR Car Card";
 
     fields
     {
         field(10; "No."; Code[20])
         {
-            CaptionML = ENU = 'No.';
+            Caption = 'No.';
             DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                if "No." <> xRec."No." then begin
+                    CarSetup.Get();
+
+                    NoSeriesMgt.TestManual(CarSetup."Car Nos.");
+
+                    "No. Series" := '';
+                end;
+            end;
         }
         field(20; Name; Text[100])
         {
-            CaptionML = ENU = 'Name';
+            Caption = 'Name';
             DataClassification = ToBeClassified;
         }
         field(30; Blocked; Boolean)
         {
-            CaptionML = ENU = 'Blocked';
+            Caption = 'Blocked';
             DataClassification = ToBeClassified;
         }
         field(40; "Car Type Code"; Code[10])
         {
-            CaptionML = ENU = 'Car Type Code';
+            Caption = 'Car Type Code';
             TableRelation = "CR Car Type";
             DataClassification = ToBeClassified;
         }
         field(50; "Brand Code"; Code[10])
         {
-            CaptionML = ENU = 'Brand Code';
+            Caption = 'Brand Code';
             TableRelation = "CR Brand";
             DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                if "Brand Code" <> xRec."Brand Code" then
+                    Validate("Model Code", '');
+            end;
         }
         field(60; "Model Code"; Code[10])
         {
-            CaptionML = ENU = 'Model Code';
-            TableRelation = "CR Model";
+            Caption = 'Model Code';
+            TableRelation = "CR Model" where("Brand Code" = field("Brand Code"));
             DataClassification = ToBeClassified;
         }
         field(70; Year; Integer)
         {
             FieldClass = FlowField;
             CalcFormula = lookup("CR Model".Year where("Code" = field("Model Code")));
-            CaptionML = ENU = 'Year';
+            Caption = 'Year';
         }
         field(80; "Daily Rate"; Decimal)
         {
-            CaptionML = ENU = 'Daily Rate';
+            Caption = 'Daily Rate';
             DataClassification = ToBeClassified;
+            AutoFormatType = 1;
         }
         field(90; Doors; Integer)
         {
-            CaptionML = ENU = 'Doors';
+            Caption = 'Doors';
             DataClassification = ToBeClassified;
         }
         field(100; Passengers; Integer)
         {
-            CaptionML = ENU = 'Passengers';
+            Caption = 'Passengers';
             DataClassification = ToBeClassified;
         }
         field(110; Baggage; Integer)
         {
-            CaptionML = ENU = 'Baggage';
+            Caption = 'Baggage';
             DataClassification = ToBeClassified;
         }
         field(120; Transmission; Option)
         {
-            CaptionML = ENU = 'Transmission';
+            Caption = 'Transmission';
             OptionMembers = "Automatic","Manual";
-            OptionCaptionML = ENU = 'Automatic,Manual';
+            OptionCaption = 'Automatic,Manual';
             DataClassification = ToBeClassified;
         }
         field(130; "Fuel Type"; Option)
         {
-            CaptionML = ENU = 'Fuel Type';
+            Caption = 'Fuel Type';
             OptionMembers = "Petrol","Diesel","Hybrid","Electric";
-            OptionCaptionML = ENU = 'Petrol,Diesel,Hybrid,Electric';
+            OptionCaption = 'Petrol,Diesel,Hybrid,Electric';
             DataClassification = ToBeClassified;
         }
         field(140; Mileage; Integer)
         {
-            CaptionML = ENU = 'Mileage';
+            Caption = 'Mileage';
             DataClassification = ToBeClassified;
         }
         field(150; Revenue; Decimal)
         {
-            CaptionML = ENU = 'Revenue';
+            Caption = 'Revenue';
             DataClassification = ToBeClassified;
         }
+        field(160; "No. Series"; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            Editable = false;
+            TableRelation = "No. Series";
+
+        }
+
 
     }
 
@@ -98,4 +125,47 @@ table 52001 "CR Car"
             Clustered = true;
         }
     }
+
+    var
+        CarSetup: Record "CR Car Setup";
+
+    var
+        Car: Record "CR Car";
+
+    var
+        NoSeriesMgt: CodeUnit NoSeriesManagement;
+
+    trigger OnInsert()
+    begin
+
+        if "No." = '' then begin
+            CarSetup.Get();
+
+            CarSetup.TestField("Car Nos.");
+
+            NoSeriesMgt.InitSeries(CarSetup."Car Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+        end;
+
+    end;
+
+    procedure AssistEdit(): boolean
+    begin
+
+        Car := Rec;
+
+        CarSetup.Get();
+
+        CarSetup.TestField("Car Nos.");
+
+        if NoSeriesMgt.SelectSeries(CarSetup."Car Nos.", xRec."No. Series", Car."No. Series") then begin
+            NoSeriesMgt.SetSeries(Car."No.");
+            Rec := Car;
+
+            exit(true);
+        end;
+
+
+
+    end;
+
 }

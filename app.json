@@ -22,5 +22,6 @@
   ],
   "contextSensitiveHelpUrl": "https://CarRental.com/help/",
   "showMyCode": true,
+  "features": ["TranslationFile"],
   "runtime": "3.0"
 }

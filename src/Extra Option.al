@@ -1,26 +1,26 @@
 table 52005 "CR Extra Option"
 {
-    CaptionML = ENU = 'Extra Option';
+    Caption = 'Extra Option';
     DataClassification = ToBeClassified;
 
     fields
     {
         field(10; Code; Code[10])
         {
-            CaptionML = ENU = 'Code';
+            Caption = 'Code';
             DataClassification = ToBeClassified;
 
         }
         field(20; Name; Text[100])
         {
-            CaptionML = ENU = 'Name';
+            Caption = 'Name';
             DataClassification = ToBeClassified;
         }
         field(30; Category; Option)
         {
-            CaptionML = ENU = 'Category';
+            Caption = 'Category';
             OptionMembers = "Convenience","Entertainment","Safety","Seating","Exterior";
-            OptionCaptionML = ENU = 'Convenience, Entertainment,Safety,Seating,Exterior';
+            OptionCaption = 'Convenience, Entertainment,Safety,Seating,Exterior';
             DataClassification = ToBeClassified;
         }
     }

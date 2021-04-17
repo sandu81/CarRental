@@ -1,25 +1,25 @@
 table 52006 "CR Car Extra Option"
 {
-    CaptionML = ENU = 'Car Extra Option';
+    Caption = 'Car Extra Option';
     DataClassification = ToBeClassified;
 
     fields
     {
         field(10; "Car No."; Code[20])
         {
-            CaptionML = ENU = 'Car No.';
+            Caption = 'Car No.';
             TableRelation = "CR Car";
             DataClassification = ToBeClassified;
 
         }
         field(20; Name; Text[100])
         {
-            CaptionML = ENU = 'Name';
+            Caption = 'Name';
             DataClassification = ToBeClassified;
         }
         field(30; "Extra Option Code"; Code[10])
         {
-            CaptionML = ENU = 'Extra Option Code';
+            Caption = 'Extra Option Code';
             TableRelation = "CR Extra Option";
             DataClassification = ToBeClassified;
         }
