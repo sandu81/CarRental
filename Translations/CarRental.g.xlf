@@ -3,15 +3,285 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="CarRental">
     <body>
       <group id="body">
-        <trans-unit id="Table 423664169 - Field 1296262074 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MyField</source>
+        <trans-unit id="Table 901659542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Brand</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Car Setup - Field MyField - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Brand - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 901659542 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Brand - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 901659542 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Brand - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 3275276676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Baggage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Baggage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 3543129988 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blocked</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Blocked - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 1853773618 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Brand Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Brand Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1119547195 - Field 2345205455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Type Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Car Type Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 4149537797 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Daily Rate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Daily Rate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 3206612439 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Doors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Doors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 143010134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fuel Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Fuel Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 143010134 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Petrol,Diesel,Hybrid,Electric</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Fuel Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 736648186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mileage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Mileage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 930798646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Model Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Model Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 4293052011 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Passengers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Passengers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 388667246 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Revenue</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Revenue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 532835786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transmission</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Transmission - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 532835786 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Automatic,Manual</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Transmission - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 2832340769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Year</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Year - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3569440284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Extra Option</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Extra Option - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3569440284 - Field 4014478313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Extra Option - Field Car No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3569440284 - Field 3375659752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extra Option Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Extra Option - Field Extra Option Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3569440284 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Extra Option - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 768584258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 768584258 - Field 263575512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Setup - Field Car Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 768584258 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3843384947 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3843384947 - Field 3275276676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Baggage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Type - Field Baggage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3843384947 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Type - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3843384947 - Field 4149537797 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Daily Rate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Type - Field Daily Rate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3843384947 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Type - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3843384947 - Field 3206612439 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Doors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Type - Field Doors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3843384947 - Field 4293052011 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Passengers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Type - Field Passengers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2462917780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extra Option</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Extra Option - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2462917780 - Field 3702373668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Extra Option - Field Category - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2462917780 - Field 3702373668 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Convenience, Entertainment,Safety,Seating,Exterior</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Extra Option - Field Category - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 2462917780 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Extra Option - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2462917780 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Extra Option - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 720154898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Model</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Model - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 720154898 - Field 1853773618 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Brand Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Model - Field Brand Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 720154898 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Model - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 720154898 - Field 736648186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mileage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Model - Field Mileage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 720154898 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Model - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 720154898 - Field 2832340769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Year</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Model - Field Year - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 56178819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Brands</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Brands - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4076314639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1733877533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Extra Options</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car Extra Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005618853 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 768584258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4269027038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Types</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car Types - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1736818261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extra Options</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Extra Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 173834335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Models</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Models - Property Caption</note>
         </trans-unit>
       </group>
     </body>

@@ -4,6 +4,7 @@ page 52006 "CR Extra Options"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Extra Option";
+    Caption = 'Extra Options';
 
     layout
     {

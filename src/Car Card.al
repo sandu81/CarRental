@@ -4,6 +4,7 @@ page 52001 "CR Car Card"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Car";
+    Caption = 'Car Card';
 
     layout
     {
@@ -60,6 +61,10 @@ page 52001 "CR Car Card"
                     ApplicationArea = All;
                 }
                 field(Mileage; Mileage)
+                {
+                    ApplicationArea = All;
+                }
+                field("Vendor No."; "Vendor No.")
                 {
                     ApplicationArea = All;
                 }

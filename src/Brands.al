@@ -4,6 +4,7 @@ page 52004 "CR Brands"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Brand";
+    Caption = 'Brands';
 
     layout
     {

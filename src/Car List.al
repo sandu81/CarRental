@@ -5,6 +5,7 @@ page 52002 "CR Car List"
     UsageCategory = Administration;
     SourceTable = "CR Car";
     CardPageId = "CR Car Card";
+    Caption = 'Car List';
 
     layout
     {
@@ -61,6 +62,10 @@ page 52002 "CR Car List"
                     ApplicationArea = All;
                 }
                 field(Mileage; Mileage)
+                {
+                    ApplicationArea = All;
+                }
+                field("Vendor No."; "Vendor No.")
                 {
                     ApplicationArea = All;
                 }

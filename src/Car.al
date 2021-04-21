@@ -37,6 +37,18 @@ table 52001 "CR Car"
             Caption = 'Car Type Code';
             TableRelation = "CR Car Type";
             DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                if "Car Type Code" <> xRec."Car Type Code" then
+                    if "Car Type Code" <> '' then begin
+                        CarType.GET("Car Type Code");
+                        "Daily Rate" := CarType."Daily Rate";
+                        Doors := CarType.Doors;
+                        Passengers := CarType.Passengers;
+                        Baggage := CarType.Baggage;
+                    end
+            end;
         }
         field(50; "Brand Code"; Code[10])
         {
@@ -115,6 +127,12 @@ table 52001 "CR Car"
 
         }
 
+        field(170; "Vendor No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "Vendor";
+        }
+
 
     }
 
@@ -128,6 +146,7 @@ table 52001 "CR Car"
 
     var
         CarSetup: Record "CR Car Setup";
+        CarType: Record "CR Car Type";
 
     var
         Car: Record "CR Car";

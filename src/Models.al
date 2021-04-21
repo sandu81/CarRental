@@ -4,6 +4,7 @@ page 52005 "CR Models"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Model";
+    Caption = 'Models';
 
     layout
     {

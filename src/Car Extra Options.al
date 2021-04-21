@@ -4,12 +4,13 @@ page 52007 "CR Car Extra Options"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Car Extra Option";
+    Caption = 'Car Extra Options';
 
     layout
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(carExtraOptions)
             {
                 field("Car No."; "Car No.")
                 {

@@ -4,12 +4,13 @@ page 52003 "CR Car Types"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Car Type";
+    Caption = 'Car Types';
 
     layout
     {
         area(Content)
         {
-            group(General)
+            repeater(carTypes)
             {
                 field(Code; Code)
                 {
