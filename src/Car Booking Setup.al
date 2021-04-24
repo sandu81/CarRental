@@ -1,6 +1,6 @@
-table 52000 "CR Car Setup"
+table 52000 "CR Car Booking Setup"
 {
-    Caption = 'Car Setup';
+    Caption = 'Car Booking Setup';
     DataClassification = ToBeClassified;
 
     fields
@@ -14,6 +14,18 @@ table 52000 "CR Car Setup"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series";
         }
+        field(30; "Booking Nos."; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series";
+        }
+        field(40; "Posted Booking Nos."; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series";
+        }
+
+
     }
 
     keys

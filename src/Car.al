@@ -14,9 +14,9 @@ table 52001 "CR Car"
             trigger OnValidate()
             begin
                 if "No." <> xRec."No." then begin
-                    CarSetup.Get();
+                    CarBookingSetup.Get();
 
-                    NoSeriesMgt.TestManual(CarSetup."Car Nos.");
+                    NoSeriesMgt.TestManual(CarBookingSetup."Car Nos.");
 
                     "No. Series" := '';
                 end;
@@ -145,24 +145,20 @@ table 52001 "CR Car"
     }
 
     var
-        CarSetup: Record "CR Car Setup";
+        CarBookingSetup: Record "CR Car Booking Setup";
         CarType: Record "CR Car Type";
-
-    var
         Car: Record "CR Car";
-
-    var
         NoSeriesMgt: CodeUnit NoSeriesManagement;
 
     trigger OnInsert()
     begin
 
         if "No." = '' then begin
-            CarSetup.Get();
+            CarBookingSetup.Get();
 
-            CarSetup.TestField("Car Nos.");
+            CarBookingSetup.TestField("Car Nos.");
 
-            NoSeriesMgt.InitSeries(CarSetup."Car Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+            NoSeriesMgt.InitSeries(CarBookingSetup."Car Nos.", xRec."No. Series", 0D, "No.", "No. Series");
         end;
 
     end;
@@ -172,11 +168,11 @@ table 52001 "CR Car"
 
         Car := Rec;
 
-        CarSetup.Get();
+        CarBookingSetup.Get();
 
-        CarSetup.TestField("Car Nos.");
+        CarBookingSetup.TestField("Car Nos.");
 
-        if NoSeriesMgt.SelectSeries(CarSetup."Car Nos.", xRec."No. Series", Car."No. Series") then begin
+        if NoSeriesMgt.SelectSeries(CarBookingSetup."Car Nos.", xRec."No. Series", Car."No. Series") then begin
             NoSeriesMgt.SetSeries(Car."No.");
             Rec := Car;
 

@@ -1,10 +1,10 @@
-page 52000 "CR Car Setup"
+page 52000 "CR Car Booking Setup"
 {
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Car Setup";
-    Caption = 'Car Setup';
+    SourceTable = "CR Car Booking Setup";
+    Caption = 'Car Booking Setup';
 
     layout
     {
