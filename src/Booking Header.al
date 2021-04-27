@@ -125,8 +125,11 @@ table 52007 "CR Booking Header"
         }
         field(110; "Total Price"; Decimal)
         {
-            DataClassification = ToBeClassified;
+
             Caption = 'Total Price';
+            FieldClass = FlowField;
+            CalcFormula = Sum("CR Booking Line".Amount where("Document No." = field("No.")));
+            Editable = false;
         }
 
         field(120; "Booking Status"; Option)

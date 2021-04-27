@@ -3,6 +3,231 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="CarRental">
     <body>
       <group id="body">
+        <trans-unit id="Table 174269737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - NamedType 49602008" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - NamedType PhoneNoCannotContainLettersErr</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 3168444338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Address</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 2306852000 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Address 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 216032351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Booking Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 216032351 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reservation,Open,Closed,Cancelled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Booking Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 714791889 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>City</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 284764054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country/Region Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Country/Region Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 499448942 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>County</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 1171137197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Customer Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 580412389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Document Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 1541011875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 3986423421 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Phone No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 3660300303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 514695969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Posting No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 103924864 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Posting No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 174269737 - Field 2812148497 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Total Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 577017651 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Ledger Entry - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 3275276676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Baggage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Baggage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 1853773618 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Brand Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Brand Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 4041986505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Car Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 4014478313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Car No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 2345205455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Type No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Car Type Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 4149537797 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Daily Rate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Daily Rate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 3206612439 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Doors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Doors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 2649176925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field End Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 143010134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fuel Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Fuel Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 143010134 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Petrol,Diesel,Hybrid,Electric</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Fuel Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 736648186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mileage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Mileage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 930798646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Model Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Model Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 2701430011 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Days</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field No. of Days - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 4293052011 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Passengers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Passengers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 474480784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Start Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 532835786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transmission</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Transmission - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 532835786 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Automatic,Manual</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Transmission - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 593937570 - Field 2832340769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Year</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Year - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3747731203 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Register - Field No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 901659542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Brand</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -118,6 +343,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Year - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1466846369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Booking Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Booking Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1466846369 - Field 906106983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Booking Setup - Field Booking Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1466846369 - Field 263575512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Booking Setup - Field Car Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1466846369 - Field 2988791768 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Booking Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Booking Setup - Field Posted Booking Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1466846369 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Booking Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3569440284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Extra Option</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -137,21 +387,6 @@
           <source>Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Extra Option - Field Name - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 768584258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Car Setup</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Setup - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 768584258 - Field 263575512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Car Nos.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Setup - Field Car Nos. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 768584258 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Primary Key</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car Setup - Field Primary Key - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3843384947 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Type</source>
@@ -243,10 +478,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Model - Field Year - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 455465044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Booking - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3901872463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Booking Lines - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 56178819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Brands</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Brands - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1466846369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Booking Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car Booking Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4076314639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Card</source>
@@ -262,11 +512,6 @@
           <source>Car List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Car List - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 768584258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Car Setup</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4269027038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Types</source>

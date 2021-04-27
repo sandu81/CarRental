@@ -11,9 +11,9 @@ page 52009 "CR Booking Lines"
     {
         area(Content)
         {
-            group(repeater)
+            repeater(lines)
             {
-                field("Car Type No."; "Car Type No.")
+                field("Car Type Code"; "Car Type Code")
                 {
                     ApplicationArea = All;
                 }
@@ -73,6 +73,10 @@ page 52009 "CR Booking Lines"
                 {
                     ApplicationArea = All;
                 }
+                field("No. of Days"; "No. of Days")
+                {
+                    ApplicationArea = All;
+                }
                 field("Amount"; "Amount")
                 {
                     ApplicationArea = All;
@@ -80,23 +84,4 @@ page 52009 "CR Booking Lines"
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
 }

@@ -20,6 +20,23 @@ page 52008 "CR Booking"
                 {
                     ApplicationArea = All;
                 }
+                field("Booking Status"; "Booking Status")
+                {
+                    ApplicationArea = All;
+                }
+                field("Document Date"; "Document Date")
+                {
+                    ApplicationArea = All;
+                }
+                field("Total Price"; "Total Price")
+                {
+                    ApplicationArea = All;
+                }
+
+            }
+            group("Customer Details")
+            {
+
                 field("Customer Name"; "Customer Name")
                 {
                     ApplicationArea = All;
@@ -64,23 +81,4 @@ page 52008 "CR Booking"
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
 }

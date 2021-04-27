@@ -15,7 +15,14 @@ page 52000 "CR Car Booking Setup"
                 field("Car Nos."; "Car Nos.")
                 {
                     ApplicationArea = All;
-
+                }
+                field("Booking Nos."; "Booking Nos.")
+                {
+                    ApplicationArea = All;
+                }
+                field("Posted Booking Nos."; "Posted Booking Nos.")
+                {
+                    ApplicationArea = All;
                 }
             }
         }
