@@ -16,7 +16,7 @@ table 52008 "CR Booking Line"
             DataClassification = ToBeClassified;
             Caption = 'Line No.';
         }
-        field(30; "Car Type No."; Code[10])
+        field(30; "Car Type Code"; Code[10])
         {
             DataClassification = ToBeClassified;
             Caption = 'Car Type No.';
@@ -26,13 +26,19 @@ table 52008 "CR Booking Line"
         {
             DataClassification = ToBeClassified;
             Caption = 'Car No.';
-            TableRelation = "CR Car";
+            TableRelation = "CR Car" where("Car Type Code" = field("Car Type Code"));
 
             trigger OnValidate()
             begin
                 if "Car No." <> xRec."Car No." then
                     if "Car No." <> '' then begin
+
+                        CheckAvailability();
+
                         Car.GET("Car No.");
+
+                        Car.CalcFields(Year);
+
                         "Daily Rate" := Car."Daily Rate";
                         "Car Name" := Car."Name";
                         "Brand Code" := Car."Brand Code";
@@ -51,6 +57,15 @@ table 52008 "CR Booking Line"
         {
             DataClassification = ToBeClassified;
             Caption = 'Daily Rate';
+
+            trigger OnValidate()
+            begin
+                if "Daily Rate" <> xRec."Daily Rate" then begin
+                    CheckAvailability();
+
+                    CalculateAmount();
+                end;
+            end;
         }
         field(60; "Start Date"; Date)
         {
@@ -59,8 +74,11 @@ table 52008 "CR Booking Line"
 
             trigger OnValidate()
             begin
-
-                //Throw an error is start date is less than or equal to current date
+                if "Start Date" <> xRec."Start Date" then begin
+                    CheckAvailability();
+                    ValidateDateFields();
+                    CalculateAmount();
+                end;
             end;
         }
         field(70; "End Date"; Date)
@@ -70,8 +88,11 @@ table 52008 "CR Booking Line"
 
             trigger OnValidate()
             begin
-
-                //Throw an error is end date is less than or equal to start date
+                if "End Date" <> xRec."End Date" then begin
+                    CheckAvailability();
+                    ValidateDateFields();
+                    CalculateAmount();
+                end;
             end;
         }
         field(80; "Car Name"; Text[100])
@@ -96,8 +117,7 @@ table 52008 "CR Booking Line"
         }
         field(110; Year; Integer)
         {
-            FieldClass = FlowField;
-            CalcFormula = lookup("CR Model".Year where("Code" = field("Model Code")));
+            DataClassification = ToBeClassified;
             Caption = 'Year';
             Editable = false;
         }
@@ -141,9 +161,16 @@ table 52008 "CR Booking Line"
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(180; Amount; Decimal)
+        field(180; "No. of Days"; Integer)
+        {
+            Caption = 'No. of Days';
+            Editable = false;
+        }
+        field(190; Amount; Decimal)
         {
             DataClassification = ToBeClassified;
+            Caption = 'Amount';
+            Editable = false;
         }
     }
 
@@ -157,24 +184,47 @@ table 52008 "CR Booking Line"
 
     var
         Car: Record "CR Car";
+        BookingLine: Record "CR Booking Line";
+        BookingHeader: Record "CR Booking Header";
 
-    trigger OnInsert()
+
+    procedure ValidateDateFields()
     begin
+        if ("Start Date" <> 0D) AND ("Start Date" <= TODAY) then
+            Error('Start date has to be greater than today');
 
+        if ("End Date" <> 0D) AND ("End Date" <= TODAY) then
+            Error('End date has to be greater than today');
+
+        if ("Start Date" <> 0D) AND ("End Date" <> 0D) AND ("End Date" <= "Start Date") then
+            Error('End date has to be greater than start date');
     end;
 
-    trigger OnModify()
+    procedure CalculateAmount()
     begin
 
+        if ("Start Date" <> 0D) AND ("End Date" <> 0D) then begin
+            "No. of Days" := "End Date" - "Start Date";
+            "Amount" := "Daily Rate" * "No. of Days";
+        end;
     end;
 
-    trigger OnDelete()
+    procedure CheckAvailability()
     begin
 
-    end;
+        if ("Car No." <> '') AND ("Start Date" <> 0D) AND ("End Date" <> 0D) then begin
 
-    trigger OnRename()
-    begin
+            //Need to add filtering logic
+
+            BookingHeader.SetFilter("Booking Status", '%1|%2', BookingHeader."Booking Status"::Reservation, BookingHeader."Booking Status"::Open);
+
+
+
+
+
+            //if(Booking.Find('-')) then
+            //Error('The selected car has already been booked for the period');
+        end;
 
     end;
 
