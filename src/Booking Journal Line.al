@@ -1,15 +1,20 @@
-table 52010 "CR Booking Ledger Entry"
+table 52012 "CR Booking Journal Line"
 {
     DataClassification = ToBeClassified;
+    Caption = 'Booking Journal';
 
     fields
     {
-        field(10; "Entry No."; Integer)
+        field(10; "Journal Template Name"; Code[10])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Entry No.';
+            Caption = 'Journal Template Name';
         }
-
+        field(20; "Line No."; Integer)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Line No.';
+        }
         field(25; Description; Text[50])
         {
 
@@ -95,57 +100,20 @@ table 52010 "CR Booking Ledger Entry"
             DataClassification = ToBeClassified;
             Caption = 'Journal Batch Name';
         }
-        field(405; "No. Series"; Code[10])
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'No. Series';
-        }
-        field(410; "User ID"; Code[20])
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'User ID';
-            TableRelation = User."User Name";
-            ValidateTableRelation = false;
-
-            trigger OnValidate()
-            var
-                UserMgt: Codeunit "User Management";
-            begin
-                UserMgt.LookupUserID("User ID");
-            end;
-
-        }
     }
 
     keys
     {
-        key(PK; "Entry No.")
+        key(PK; "Journal Template Name", "Journal Batch Name", "Line No.")
         {
             Clustered = true;
         }
     }
 
-    var
-        myInt: Integer;
-
-    trigger OnInsert()
+    procedure EmptyLine(): Boolean
     begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
+        Exit("Customer No." = '');
+        Exit("Car No." = '');
     end;
 
 }

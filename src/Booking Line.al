@@ -19,8 +19,28 @@ table 52008 "CR Booking Line"
         field(30; "Car Type Code"; Code[10])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Car Type No.';
+            Caption = 'Car Type Code';
             TableRelation = "CR Car Type";
+
+            trigger OnValidate()
+            begin
+
+                if "Car Type Code" <> xRec."Car Type Code" then begin
+                    "Car No." := '';
+                    "Daily Rate" := 0;
+                    "Car Name" := '';
+                    "Brand Code" := '';
+                    "Model Code" := '';
+                    "Year" := 0;
+                    "Doors" := 0;
+                    "Passengers" := 0;
+                    "Baggage" := 0;
+                    "Mileage" := 0;
+                end;
+
+
+
+            end;
         }
         field(40; "Car No."; Code[20])
         {
@@ -61,8 +81,6 @@ table 52008 "CR Booking Line"
             trigger OnValidate()
             begin
                 if "Daily Rate" <> xRec."Daily Rate" then begin
-                    CheckAvailability();
-
                     CalculateAmount();
                 end;
             end;
@@ -189,15 +207,19 @@ table 52008 "CR Booking Line"
 
 
     procedure ValidateDateFields()
+    var
+        PastDateErr: label 'Bookings can be made only for future dates.';
+        DateRangeErr: label 'End date has to be greater than start date';
+
     begin
         if ("Start Date" <> 0D) AND ("Start Date" <= TODAY) then
-            Error('Start date has to be greater than today');
+            Error(PastDateErr);
 
         if ("End Date" <> 0D) AND ("End Date" <= TODAY) then
-            Error('End date has to be greater than today');
+            Error(PastDateErr);
 
         if ("Start Date" <> 0D) AND ("End Date" <> 0D) AND ("End Date" <= "Start Date") then
-            Error('End date has to be greater than start date');
+            Error(DateRangeErr);
     end;
 
     procedure CalculateAmount()
@@ -210,20 +232,44 @@ table 52008 "CR Booking Line"
     end;
 
     procedure CheckAvailability()
+    var
+        AlreadyBookedErr: label 'The selected car has already been booked for the period';
     begin
 
         if ("Car No." <> '') AND ("Start Date" <> 0D) AND ("End Date" <> 0D) then begin
-
-            //Need to add filtering logic
-
             BookingHeader.SetFilter("Booking Status", '%1|%2', BookingHeader."Booking Status"::Reservation, BookingHeader."Booking Status"::Open);
+            BookingHeader.SetFilter("No.", '<>%1', "Document No.");
 
+            if BookingHeader.FindSet() then
+                repeat
 
+                    //Bookings for same Car with Start Date between current Start Date and End Date
+                    BookingLine.Reset();
+                    BookingLine.SetRange("Document No.", BookingHeader."No.");
+                    BookingLine.SetRange("Car No.", "Car No.");
+                    BookingLine.SetRange("Start Date", "Start Date", "End Date");
+                    if not BookingLine.IsEmpty() then
+                        Error(AlreadyBookedErr);
 
+                    //Bookings for same Car with End Date between current Start Date and End Date
+                    BookingLine.Reset();
+                    BookingLine.SetRange("Document No.", BookingHeader."No.");
+                    BookingLine.SetRange("Car No.", "Car No.");
+                    BookingLine.SetRange("End Date", "Start Date", "End Date");
+                    if not BookingLine.IsEmpty() then
+                        Error(AlreadyBookedErr);
 
+                    //Bookings for same Car with Start Date before current Start Date and End Date after current End Date
+                    BookingLine.Reset();
+                    BookingLine.SetRange("Document No.", BookingHeader."No.");
+                    BookingLine.SetRange("Car No.", "Car No.");
+                    BookingLine.SetFilter("Start Date", '<%1', "Start Date");
+                    BookingLine.SetFilter("End Date", '>%1', "End Date");
 
-            //if(Booking.Find('-')) then
-            //Error('The selected car has already been booked for the period');
+                    if not BookingLine.IsEmpty() then
+                        Error(AlreadyBookedErr);
+
+                until BookingHeader.Next() = 0;
         end;
 
     end;
