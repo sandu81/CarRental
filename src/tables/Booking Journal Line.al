@@ -84,7 +84,16 @@ table 52012 "CR Booking Journal Line"
             DataClassification = ToBeClassified;
             Caption = 'Amount';
         }
-
+        field(120; "Document No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Document No.';
+        }
+        field(130; "Posting No. Series"; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Posting No. Series';
+        }
         field(200; "Source Code"; Code[10])
         {
             DataClassification = ToBeClassified;
@@ -95,6 +104,7 @@ table 52012 "CR Booking Journal Line"
             DataClassification = ToBeClassified;
             Caption = 'Reason Code';
         }
+
         field(400; "Journal Batch Name"; Code[10])
         {
             DataClassification = ToBeClassified;

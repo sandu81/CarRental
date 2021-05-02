@@ -100,6 +100,11 @@ table 52010 "CR Booking Ledger Entry"
             DataClassification = ToBeClassified;
             Caption = 'No. Series';
         }
+        field(406; "Document No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Document No.';
+        }
         field(410; "User ID"; Code[20])
         {
             DataClassification = ToBeClassified;

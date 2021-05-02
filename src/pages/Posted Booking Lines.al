@@ -1,83 +1,86 @@
-page 52008 "CR Booking"
+page 52014 "CR Posted Booking Lines"
 {
-    PageType = Document;
+    PageType = ListPart;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Booking Header";
-    Caption = 'Booking';
+    SourceTable = "CR Posted Booking Line";
+    Caption = 'Lines';
+    AutoSplitKey = true;
 
     layout
     {
         area(Content)
         {
-            group(General)
+            repeater(lines)
             {
-                field("No."; "No.")
+                field("Car Type Code"; "Car Type Code")
                 {
                     ApplicationArea = All;
                 }
-                field("Customer No."; "Customer No.")
+                field("Car No."; "Car No.")
                 {
                     ApplicationArea = All;
                 }
-                field("Booking Status"; "Booking Status")
+                field("Daily Rate"; "Daily Rate")
                 {
                     ApplicationArea = All;
                 }
-                field("Document Date"; "Document Date")
+                field("Start Date"; "Start Date")
                 {
                     ApplicationArea = All;
                 }
-                field("Total Price"; "Total Price")
+                field("End Date"; "End Date")
                 {
                     ApplicationArea = All;
                 }
-
-            }
-            group("Customer Details")
-            {
-
-                field("Customer Name"; "Customer Name")
+                field("Car Name"; "Car Name")
                 {
                     ApplicationArea = All;
                 }
-                field("Address"; "Address")
+                field("Brand Code"; "Brand Code")
                 {
                     ApplicationArea = All;
                 }
-                field("Address 2"; "Address 2")
+                field("Model Code"; "Model Code")
                 {
                     ApplicationArea = All;
                 }
-                field("City"; "City")
+                field("Year"; "Year")
                 {
                     ApplicationArea = All;
                 }
-                field("Post Code"; "Post Code")
+                field("Doors"; "Doors")
                 {
                     ApplicationArea = All;
                 }
-                field("County"; "County")
+                field("Passengers"; "Passengers")
                 {
                     ApplicationArea = All;
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Baggage"; "Baggage")
                 {
                     ApplicationArea = All;
                 }
-                field("Phone No."; "Phone No.")
+                field("Transmission"; "Transmission")
                 {
                     ApplicationArea = All;
                 }
-                field("E-Mail"; "E-Mail")
+                field("Fuel Type"; "Fuel Type")
                 {
                     ApplicationArea = All;
                 }
-
-            }
-            part("Booking Lines"; "CR Booking Lines")
-            {
-                SubPageLink = "Document No." = field("No.");
+                field("Mileage"; "Mileage")
+                {
+                    ApplicationArea = All;
+                }
+                field("No. of Days"; "No. of Days")
+                {
+                    ApplicationArea = All;
+                }
+                field("Amount"; "Amount")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

@@ -1,4 +1,4 @@
-codeunit 52000 "Booking Jnl.-Check Line"
+codeunit 52000 "CR Booking Jnl.-Check Line"
 {
     TableNo = "CR Booking Journal Line";
 
