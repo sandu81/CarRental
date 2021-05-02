@@ -11,7 +11,7 @@ page 52012 "CR Booking Ledger Entries"
     {
         area(Content)
         {
-            group(General)
+            repeater(General)
             {
                 field("Posting Date"; "Posting Date")
                 {
