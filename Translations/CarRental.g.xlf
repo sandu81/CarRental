@@ -108,6 +108,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Header - Field Total Price - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1778960639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Journal Batch</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Batch - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1778960639 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Batch - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1778960639 - Field 3684440170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Batch - Field Journal Template Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1778960639 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Batch - Field Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 760430193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Booking Journal</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -212,6 +232,21 @@
           <source>Start Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Line - Field Start Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2519542595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Journal Template</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Template - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2519542595 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Template - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2519542595 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Template - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 577017651 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
@@ -967,6 +1002,16 @@
           <source>P&amp;ost</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Booking - Action Post - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2797433933 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Journal Batches</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Booking Journal Batches - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2676813710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Journal Templates</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Booking Journal Templates - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3706776041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Booking Ledger Entries</source>

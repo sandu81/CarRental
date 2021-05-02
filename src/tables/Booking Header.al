@@ -213,7 +213,7 @@ table 52007 "CR Booking Header"
 
             CarBookingSetup.TestField("Booking Nos.");
 
-            NoSeriesMgt.InitSeries(CarBookingSetup."Car Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+            NoSeriesMgt.InitSeries(CarBookingSetup."Booking Nos.", xRec."No. Series", 0D, "No.", "No. Series");
         end;
 
         InitRecord();

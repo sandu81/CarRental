@@ -9,6 +9,7 @@ table 52012 "CR Booking Journal Line"
         {
             DataClassification = ToBeClassified;
             Caption = 'Journal Template Name';
+            TableRelation = "CR Booking Journal Template";
         }
         field(20; "Line No."; Integer)
         {
@@ -109,6 +110,7 @@ table 52012 "CR Booking Journal Line"
         {
             DataClassification = ToBeClassified;
             Caption = 'Journal Batch Name';
+            TableRelation = "CR Booking Journal Batch";
         }
     }
 
