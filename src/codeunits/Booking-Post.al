@@ -100,6 +100,7 @@ codeunit 52005 "CR Booking-Post"
 
         BookingJnlLine."Booking No." := BookingHeader."No.";
         BookingJnlLine."Booking Status" := BookingHeader."Booking Status";
+        BookingJnlLine."Posting Date" := BookingHeader."Posting Date";
         BookingJnlLine."Document Date" := BookingHeader."Document Date";
         BookingJnlLine."Document No." := PostedBookingHeader."No.";
         BookingJnlLine."Customer No." := BookingHeader."Customer No.";

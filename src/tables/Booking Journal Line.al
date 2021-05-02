@@ -18,7 +18,8 @@ table 52012 "CR Booking Journal Line"
         }
         field(25; Description; Text[50])
         {
-
+            DataClassification = ToBeClassified;
+            Caption = 'Description';
         }
         field(30; "Posting Date"; Date)
         {

@@ -1003,6 +1003,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Booking - Action Post - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1811019003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Journal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Booking Journal - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2797433933 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Booking Journal Batches</source>
           <note from="Developer" annotates="general" priority="2"></note>
