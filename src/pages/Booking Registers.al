@@ -11,7 +11,7 @@ page 52013 "CR Booking Registers"
     {
         area(Content)
         {
-            group(General)
+            repeater(General)
             {
                 field("No."; "No.")
                 {

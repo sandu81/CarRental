@@ -6,6 +6,7 @@ tableextension 52000 "Source Code Setup Extension" extends "Source Code Setup"
         {
             Caption = 'Booking';
             DataClassification = ToBeClassified;
+            TableRelation = "Source Code";
         }
     }
 

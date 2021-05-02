@@ -248,6 +248,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Template - Field Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 577017651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Ledger Entry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Ledger Entry - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 577017651 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -472,6 +477,11 @@
           <source>Year</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Line - Field Year - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3747731203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Register</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Register - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3747731203 - Field 1407200743 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Creation Date</source>
@@ -1079,7 +1089,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Posted Booking - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 773661696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Lines</source>
+          <source>Posted Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Posted Booking Lines - Property Caption</note>
         </trans-unit>

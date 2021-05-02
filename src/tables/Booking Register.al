@@ -29,6 +29,7 @@ table 52011 "CR Booking Register"
         {
             DataClassification = ToBeClassified;
             Caption = 'Source Code';
+            TableRelation = "Source Code";
         }
         field(60; "User ID"; Code[20])
         {

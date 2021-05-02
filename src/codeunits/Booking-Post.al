@@ -45,13 +45,13 @@ codeunit 52005 "CR Booking-Post"
 
         SourceCodeSetup.Get();
 
-        //BookingHeader.SourceCode := SourceCodeSetup.Booking;
+        SourceCode := SourceCodeSetup.Booking;
 
         PostedBookingHeader.Init();
         PostedBookingHeader.TransferFields(BookingHeader);
         PostedBookingHeader."No." := BookingHeader."Posting No.";
         PostedBookingHeader."No. Series" := BookingHeader."Posting No. Series";
-        //PostedBookingHeader."Source Code" := SourceCode;
+        PostedBookingHeader."Source Code" := SourceCode;
         PostedBookingHeader."User ID" := UserId;
         PostedBookingHeader.Insert();
 
@@ -79,10 +79,6 @@ codeunit 52005 "CR Booking-Post"
 
                 PostedBookingLine.Insert();
 
-
-
-
-
             until BookingLine.Next() = 0;
         end;
 
@@ -104,7 +100,7 @@ codeunit 52005 "CR Booking-Post"
         BookingJnlLine."Document Date" := BookingHeader."Document Date";
         BookingJnlLine."Document No." := PostedBookingHeader."No.";
         BookingJnlLine."Customer No." := BookingHeader."Customer No.";
-        //BookingJnlLine."Source Code" := ?
+        BookingJnlLine."Source Code" := SourceCode;
         //BookingJnlLine."Reason Code" := ?
         BookingJnlLine."Posting No. Series" := BookingHeader."Posting No. Series";
         BookingJnlLine.Description := BookingHeader."Customer Name";
@@ -131,5 +127,6 @@ codeunit 52005 "CR Booking-Post"
         NoSeriesMgt: Codeunit NoSeriesManagement;
 
         SourceCodeSetup: Record "Source Code Setup";
+        SourceCode: Code[10];
         LineCount: Integer;
 }
