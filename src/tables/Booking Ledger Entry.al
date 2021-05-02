@@ -1,6 +1,7 @@
 table 52010 "CR Booking Ledger Entry"
 {
     DataClassification = ToBeClassified;
+    Caption = 'Booking Ledger Entry';
 
     fields
     {
@@ -12,7 +13,8 @@ table 52010 "CR Booking Ledger Entry"
 
         field(25; Description; Text[50])
         {
-
+            DataClassification = ToBeClassified;
+            Caption = 'Description';
         }
         field(30; "Posting Date"; Date)
         {

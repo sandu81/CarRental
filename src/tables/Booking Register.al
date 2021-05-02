@@ -1,6 +1,7 @@
 table 52011 "CR Booking Register"
 {
     DataClassification = ToBeClassified;
+    Caption = 'Booking Register';
 
     fields
     {

@@ -92,6 +92,7 @@ table 52014 "CR Posted Booking Header"
         }
         field(130; "No. Series"; Code[10])
         {
+            Caption = 'No. Series';
             DataClassification = ToBeClassified;
             Editable = false;
             TableRelation = "No. Series";

@@ -4,7 +4,7 @@ page 52014 "CR Posted Booking Lines"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Posted Booking Line";
-    Caption = 'Lines';
+    Caption = 'Posted Lines';
     AutoSplitKey = true;
 
     layout

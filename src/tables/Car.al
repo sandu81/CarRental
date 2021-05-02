@@ -121,6 +121,7 @@ table 52001 "CR Car"
         }
         field(160; "No. Series"; Code[10])
         {
+            Caption = 'No. Series';
             DataClassification = ToBeClassified;
             Editable = false;
             TableRelation = "No. Series";
@@ -129,11 +130,10 @@ table 52001 "CR Car"
 
         field(170; "Vendor No."; Code[20])
         {
+            Caption = 'Vendor No.';
             DataClassification = ToBeClassified;
             TableRelation = "Vendor";
         }
-
-
     }
 
     keys

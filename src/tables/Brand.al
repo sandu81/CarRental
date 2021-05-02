@@ -9,7 +9,6 @@ table 52003 "CR Brand"
         {
             Caption = 'Code';
             DataClassification = ToBeClassified;
-
         }
         field(20; Name; Text[100])
         {

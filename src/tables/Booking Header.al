@@ -144,12 +144,14 @@ table 52007 "CR Booking Header"
             DataClassification = ToBeClassified;
             Editable = false;
             TableRelation = "No. Series";
+            Caption = 'No. Series';
 
         }
         field(140; "Posting No. Series"; Code[10])
         {
             DataClassification = ToBeClassified;
             TableRelation = "No. Series";
+            Caption = 'Posting No. Series';
 
             trigger OnValidate()
             begin
