@@ -204,6 +204,8 @@ table 52008 "CR Booking Line"
         Car: Record "CR Car";
         BookingLine: Record "CR Booking Line";
         BookingHeader: Record "CR Booking Header";
+        PostedBookingHeader: Record "CR Posted Booking Header";
+        PostedBookingLine: Record "CR Posted Booking Line";
 
 
     procedure ValidateDateFields()
@@ -237,7 +239,10 @@ table 52008 "CR Booking Line"
     begin
 
         if ("Car No." <> '') AND ("Start Date" <> 0D) AND ("End Date" <> 0D) then begin
-            BookingHeader.SetFilter("Booking Status", '%1|%2', BookingHeader."Booking Status"::Reservation, BookingHeader."Booking Status"::Open);
+
+
+            //Check in Booking
+            BookingHeader.SetFilter("Booking Status", '%1|%2|%3', BookingHeader."Booking Status"::Reservation, BookingHeader."Booking Status"::Open, BookingHeader."Booking Status"::Closed);
             BookingHeader.SetFilter("No.", '<>%1', "Document No.");
 
             if BookingHeader.FindSet() then
@@ -270,6 +275,40 @@ table 52008 "CR Booking Line"
                         Error(AlreadyBookedErr);
 
                 until BookingHeader.Next() = 0;
+
+
+
+            //Check in Posted Booking
+            if PostedBookingHeader.FindSet() then
+                repeat
+
+                    //Bookings for same Car with Start Date between current Start Date and End Date
+                    PostedBookingLine.Reset();
+                    PostedBookingLine.SetRange("Document No.", PostedBookingHeader."No.");
+                    PostedBookingLine.SetRange("Car No.", "Car No.");
+                    PostedBookingLine.SetRange("Start Date", "Start Date", "End Date");
+                    if not PostedBookingLine.IsEmpty() then
+                        Error(AlreadyBookedErr);
+
+                    //Bookings for same Car with End Date between current Start Date and End Date
+                    PostedBookingLine.Reset();
+                    PostedBookingLine.SetRange("Document No.", PostedBookingHeader."No.");
+                    PostedBookingLine.SetRange("Car No.", "Car No.");
+                    PostedBookingLine.SetRange("End Date", "Start Date", "End Date");
+                    if not PostedBookingLine.IsEmpty() then
+                        Error(AlreadyBookedErr);
+
+                    //Bookings for same Car with Start Date before current Start Date and End Date after current End Date
+                    PostedBookingLine.Reset();
+                    PostedBookingLine.SetRange("Document No.", PostedBookingHeader."No.");
+                    PostedBookingLine.SetRange("Car No.", "Car No.");
+                    PostedBookingLine.SetFilter("Start Date", '<%1', "Start Date");
+                    PostedBookingLine.SetFilter("End Date", '>%1', "End Date");
+
+                    if not PostedBookingLine.IsEmpty() then
+                        Error(AlreadyBookedErr);
+
+                until PostedBookingHeader.Next() = 0;
         end;
 
     end;

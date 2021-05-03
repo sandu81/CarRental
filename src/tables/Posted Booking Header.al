@@ -79,7 +79,7 @@ table 52014 "CR Posted Booking Header"
 
             Caption = 'Total Price';
             FieldClass = FlowField;
-            CalcFormula = Sum("CR Booking Line".Amount where("Document No." = field("No.")));
+            CalcFormula = Sum("CR Posted Booking Line".Amount where("Document No." = field("No.")));
             Editable = false;
         }
 
@@ -110,13 +110,6 @@ table 52014 "CR Posted Booking Header"
             Caption = 'User ID';
             TableRelation = User."User Name";
             ValidateTableRelation = false;
-
-            trigger OnLookup()
-            var
-                UserMgt: Codeunit "User Management";
-            begin
-                UserMgt.LookupUserID("User ID");
-            end;
         }
         field(160; "Source Code"; Code[10])
         {
