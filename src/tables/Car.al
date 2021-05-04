@@ -134,6 +134,12 @@ table 52001 "CR Car"
             DataClassification = ToBeClassified;
             TableRelation = "Vendor";
         }
+        field(180; "Total Revenue"; Decimal)
+        {
+            Caption = 'Total Revenue';
+            FieldClass = FlowField;
+            CalcFormula = Sum("CR Booking Ledger Entry".Amount where("Car No." = field("No.")));
+        }
     }
 
     keys

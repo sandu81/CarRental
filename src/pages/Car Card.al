@@ -70,6 +70,16 @@ page 52001 "CR Car Card"
                 }
             }
         }
+        area(FactBoxes)
+        {
+            part(Profitability; "CR Car Profitability")
+            {
+                Caption = 'Key Figures';
+                ApplicationArea = All;
+                SubPageLink = "No." = field("No.");
+            }
+
+        }
     }
 
 

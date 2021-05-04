@@ -613,6 +613,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Revenue - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 171285596 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Revenue</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Total Revenue - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1119547195 - Field 532835786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Transmission</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1057,6 +1062,11 @@
           <source>Car Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Car Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4076314639 - Control 3906826120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Key Figures</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car Card - Control Profitability - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1733877533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Extra Options</source>
