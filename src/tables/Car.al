@@ -134,11 +134,22 @@ table 52001 "CR Car"
             DataClassification = ToBeClassified;
             TableRelation = "Vendor";
         }
-        field(180; "Total Revenue"; Decimal)
+        field(180; "Booking Start Date Filter"; Date)
+        {
+            Caption = 'Booking Start';
+            FieldClass = FlowFilter;
+        }
+        field(190; "Booking End Date Filter"; Date)
+        {
+            Caption = 'Booking End';
+            FieldClass = FlowFilter;
+        }
+
+        field(200; "Total Revenue"; Decimal)
         {
             Caption = 'Total Revenue';
             FieldClass = FlowField;
-            CalcFormula = Sum("CR Booking Ledger Entry".Amount where("Car No." = field("No.")));
+            CalcFormula = Sum("CR Booking Ledger Entry".Amount where("Car No." = field("No."), "Start Date" = field("Booking Start Date Filter"), "End Date" = field("Booking End Date Filter")));
         }
     }
 

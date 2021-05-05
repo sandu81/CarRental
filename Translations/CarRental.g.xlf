@@ -548,6 +548,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Blocked - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 714353318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking End</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Booking End Date Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1119547195 - Field 2453732063 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Booking Start</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Car - Field Booking Start Date Filter - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1119547195 - Field 1853773618 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Brand Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1102,6 +1112,16 @@
           <source>Posted Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Posted Booking Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2875958279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Profitability Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CR Car Profitability - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2875958279 - NamedType 878482759" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Profitability Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CR Car Profitability - NamedType ReportTitle_CaptionLbl</note>
         </trans-unit>
         <trans-unit id="TableExtension 2411252482 - Field 3496392619 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1642199961">
           <source>Booking</source>
