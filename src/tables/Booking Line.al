@@ -157,19 +157,15 @@ table 52008 "CR Booking Line"
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(150; Transmission; Option)
+        field(150; Transmission; Enum "CR Transmission Types")
         {
             Caption = 'Transmission';
-            OptionMembers = "Automatic","Manual";
-            OptionCaption = 'Automatic,Manual';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(160; "Fuel Type"; Option)
+        field(160; "Fuel Type"; Enum "CR Fuel Types")
         {
             Caption = 'Fuel Type';
-            OptionMembers = "Petrol","Diesel","Hybrid","Electric";
-            OptionCaption = 'Petrol,Diesel,Hybrid,Electric';
             DataClassification = ToBeClassified;
             Editable = false;
         }
@@ -242,7 +238,7 @@ table 52008 "CR Booking Line"
 
 
             //Check in Booking
-            BookingHeader.SetFilter("Booking Status", '%1|%2|%3', BookingHeader."Booking Status"::Reservation, BookingHeader."Booking Status"::Open, BookingHeader."Booking Status"::Closed);
+            //BookingHeader.SetFilter("Booking Status", '%1|%2|%3', BookingHeader."Booking Status"::Reservation, BookingHeader."Booking Status"::Open, BookingHeader."Booking Status"::Closed);
             BookingHeader.SetFilter("No.", '<>%1', "Document No.");
 
             if BookingHeader.FindSet() then

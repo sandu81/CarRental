@@ -131,14 +131,6 @@ table 52007 "CR Booking Header"
             CalcFormula = Sum("CR Booking Line".Amount where("Document No." = field("No.")));
             Editable = false;
         }
-
-        field(120; "Booking Status"; Option)
-        {
-            Caption = 'Booking Status';
-            DataClassification = ToBeClassified;
-            OptionMembers = "Reservation","Open","Closed","Cancelled";
-            OptionCaption = 'Reservation,Open,Closed,Cancelled';
-        }
         field(130; "No. Series"; Code[10])
         {
             DataClassification = ToBeClassified;
@@ -224,7 +216,6 @@ table 52007 "CR Booking Header"
 
     trigger OnDelete()
     begin
-        TestField("Booking Status", "Booking Status"::Cancelled);
 
         BookingLine.Reset();
 
@@ -271,15 +262,17 @@ table 52007 "CR Booking Header"
 
 
     var
-        i: Integer;
-        MailManagement: CodeUnit "Mail Management";
-        PhoneNoCannotContainLettersErr: Label '';
         CarBookingSetup: Record "CR Car Booking Setup";
-        NoSeriesMgt: CodeUnit NoSeriesManagement;
         BookingLine: Record "CR Booking Line";
         Customer: Record "Customer";
         PostCode: Record "Post Code";
         BookingHeader: Record "CR Booking Header";
+        MailManagement: CodeUnit "Mail Management";
+        NoSeriesMgt: CodeUnit NoSeriesManagement;
+        i: Integer;
+
+
+
 
 }
 

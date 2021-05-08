@@ -82,14 +82,6 @@ table 52014 "CR Posted Booking Header"
             CalcFormula = Sum("CR Posted Booking Line".Amount where("Document No." = field("No.")));
             Editable = false;
         }
-
-        field(120; "Booking Status"; Option)
-        {
-            Caption = 'Booking Status';
-            DataClassification = ToBeClassified;
-            OptionMembers = "Reservation","Open","Closed","Cancelled";
-            OptionCaption = 'Reservation,Open,Closed,Cancelled';
-        }
         field(130; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
@@ -116,6 +108,17 @@ table 52014 "CR Posted Booking Header"
             DataClassification = ToBeClassified;
             Caption = 'Source Code';
             TableRelation = "Source Code";
+        }
+
+        field(170; "Cancelling No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Cancelling No.';
+        }
+        field(180; "Is Cancelled"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Is Cancelled';
         }
 
     }

@@ -19,7 +19,7 @@ codeunit 52000 "CR Booking Jnl.-Check Line"
 
 
         if BookingJnlLine."Posting Date" = ClosingDate(BookingJnlLine."Posting Date") then
-            BookingJnlLine.FieldError("Posting Date", Text000);
+            BookingJnlLine.FieldError("Posting Date", NotClosingDatelbl);
 
         if (AllowPostingFrom = 0D) AND (AllowPostingTo = 0D) then begin
 
@@ -42,11 +42,11 @@ codeunit 52000 "CR Booking Jnl.-Check Line"
         end;
 
         if (BookingJnlLine."Posting Date" < AllowPostingFrom) OR (BookingJnlLine."Posting Date" > AllowPostingTo) then
-            BookingJnlLine.FieldError("Posting Date", Text001);
+            BookingJnlLine.FieldError("Posting Date", NotWithinPostingDateRangelbl);
 
         if (BookingJnlLine."Document Date" <> 0D) then
             if (BookingJnlLine."Document Date" = ClosingDate(BookingJnlLine."Document Date")) then
-                BookingJnlLine.FieldError("Document Date", Text000);
+                BookingJnlLine.FieldError("Document Date", NotClosingDatelbl);
 
     end;
 
@@ -55,6 +55,6 @@ codeunit 52000 "CR Booking Jnl.-Check Line"
         UserSetup: Record "User Setup";
         AllowPostingFrom: Date;
         AllowPostingTo: Date;
-        Text000: Label 'cannot be a closing date.';
-        Text001: Label 'is not within your range of allowed posting dates.';
+        NotClosingDatelbl: Label 'cannot be a closing date.';
+        NotWithinPostingDateRangelbl: Label 'is not within your range of allowed posting dates.';
 }

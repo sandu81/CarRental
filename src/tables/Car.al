@@ -2,7 +2,7 @@ table 52001 "CR Car"
 {
     Caption = 'Car';
     DataClassification = ToBeClassified;
-    LookupPageId = "CR Car Card";
+    LookupPageId = "CR Car List";
 
     fields
     {
@@ -48,6 +48,12 @@ table 52001 "CR Car"
                         Passengers := CarType.Passengers;
                         Baggage := CarType.Baggage;
                     end
+                    else begin
+                        Validate("Daily Rate", 0);
+                        Validate("Doors", 0);
+                        Validate("Passengers", 0);
+                        Validate("Baggage", 0);
+                    end;
             end;
         }
         field(50; "Brand Code"; Code[10])
@@ -95,28 +101,19 @@ table 52001 "CR Car"
             Caption = 'Baggage';
             DataClassification = ToBeClassified;
         }
-        field(120; Transmission; Option)
+        field(120; Transmission; Enum "CR Transmission Types")
         {
             Caption = 'Transmission';
-            OptionMembers = "Automatic","Manual";
-            OptionCaption = 'Automatic,Manual';
             DataClassification = ToBeClassified;
         }
-        field(130; "Fuel Type"; Option)
+        field(130; "Fuel Type"; Enum "CR Fuel Types")
         {
             Caption = 'Fuel Type';
-            OptionMembers = "Petrol","Diesel","Hybrid","Electric";
-            OptionCaption = 'Petrol,Diesel,Hybrid,Electric';
             DataClassification = ToBeClassified;
         }
         field(140; Mileage; Integer)
         {
             Caption = 'Mileage';
-            DataClassification = ToBeClassified;
-        }
-        field(150; Revenue; Decimal)
-        {
-            Caption = 'Revenue';
             DataClassification = ToBeClassified;
         }
         field(160; "No. Series"; Code[10])
@@ -195,9 +192,6 @@ table 52001 "CR Car"
 
             exit(true);
         end;
-
-
-
     end;
 
 }

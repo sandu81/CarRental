@@ -24,6 +24,4 @@ table 52003 "CR Brand"
             Clustered = true;
         }
     }
-
-
 }

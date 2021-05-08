@@ -87,19 +87,15 @@ table 52015 "CR Posted Booking Line"
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(150; Transmission; Option)
+        field(150; Transmission; Enum "CR Transmission Types")
         {
             Caption = 'Transmission';
-            OptionMembers = "Automatic","Manual";
-            OptionCaption = 'Automatic,Manual';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(160; "Fuel Type"; Option)
+        field(160; "Fuel Type"; Enum "CR Fuel Types")
         {
             Caption = 'Fuel Type';
-            OptionMembers = "Petrol","Diesel","Hybrid","Electric";
-            OptionCaption = 'Petrol,Diesel,Hybrid,Electric';
             DataClassification = ToBeClassified;
             Editable = false;
         }

@@ -19,14 +19,13 @@ codeunit 52005 "CR Booking-Post"
         BookingHeader.TestField("Posting Date");
         BookingHeader.TestField("Document Date");
         BookingHeader.TestField("Customer No.");
-        BookingHeader.TestField("Booking Status", BookingHeader."Booking Status"::Closed);
 
         BookingLine.Reset();
 
         BookingLine.SetRange("Document No.", BookingHeader."No.");
 
         if BookingLine.IsEmpty then
-            Error(Text001);
+            Error(NoVehicleslbl);
 
 
         //TODO Show progress with a dialog
@@ -53,6 +52,7 @@ codeunit 52005 "CR Booking-Post"
         PostedBookingHeader."No. Series" := BookingHeader."Posting No. Series";
         PostedBookingHeader."Source Code" := SourceCode;
         PostedBookingHeader."User ID" := UserId;
+        PostedBookingHeader."Is Cancelled" := false;
         PostedBookingHeader.Insert();
 
         LineCount := 0;
@@ -95,13 +95,11 @@ codeunit 52005 "CR Booking-Post"
         BookingJnlLine.Init();
 
         BookingJnlLine."Booking No." := BookingHeader."No.";
-        BookingJnlLine."Booking Status" := BookingHeader."Booking Status";
         BookingJnlLine."Posting Date" := BookingHeader."Posting Date";
         BookingJnlLine."Document Date" := BookingHeader."Document Date";
         BookingJnlLine."Document No." := PostedBookingHeader."No.";
         BookingJnlLine."Customer No." := BookingHeader."Customer No.";
         BookingJnlLine."Source Code" := SourceCode;
-        //BookingJnlLine."Reason Code" := ?
         BookingJnlLine."Posting No. Series" := BookingHeader."Posting No. Series";
         BookingJnlLine.Description := BookingHeader."Customer Name";
 
@@ -122,11 +120,10 @@ codeunit 52005 "CR Booking-Post"
         PostedBookingHeader: Record "CR Posted Booking Header";
         PostedBookingLine: Record "CR Posted Booking Line";
         BookingJnlLine: Record "CR Booking Journal Line";
-        BookingJnlPostLine: Codeunit "CR Booking Jnl.-Post Line";
-        Text001: Label 'Cannot post booking with no vehicles.';
-        NoSeriesMgt: Codeunit NoSeriesManagement;
-
         SourceCodeSetup: Record "Source Code Setup";
+        BookingJnlPostLine: Codeunit "CR Booking Jnl.-Post Line";
+        NoSeriesMgt: Codeunit NoSeriesManagement;
+        NoVehicleslbl: Label 'Cannot post booking with no vehicles.';
         SourceCode: Code[10];
         LineCount: Integer;
 }

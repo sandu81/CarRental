@@ -40,10 +40,6 @@ page 52017 "CR Booking Journal"
                 {
                     ApplicationArea = All;
                 }
-                field("Booking Status"; "Booking Status")
-                {
-                    ApplicationArea = All;
-                }
                 field("Start Date"; "Start Date")
                 {
                     ApplicationArea = All;
@@ -83,23 +79,4 @@ page 52017 "CR Booking Journal"
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
 }

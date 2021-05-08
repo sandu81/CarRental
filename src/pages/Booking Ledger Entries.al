@@ -37,11 +37,6 @@ page 52012 "CR Booking Ledger Entries"
                 {
                     ApplicationArea = All;
                 }
-                field("Booking Status"; "Booking Status")
-                {
-                    ApplicationArea = All;
-
-                }
                 field("Start Date"; "Start Date")
                 {
                     ApplicationArea = All;

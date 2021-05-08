@@ -20,10 +20,6 @@ page 52008 "CR Booking"
                 {
                     ApplicationArea = All;
                 }
-                field("Booking Status"; "Booking Status")
-                {
-                    ApplicationArea = All;
-                }
                 field("Document Date"; "Document Date")
                 {
                     ApplicationArea = All;

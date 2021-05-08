@@ -24,4 +24,19 @@ page 52004 "CR Brands"
         }
     }
 
+    actions
+    {
+        area("Processing")
+        {
+            action("Models")
+            {
+                ApplicationArea = All;
+                RunObject = codeunit "CR Booking-Show Models";
+                Image = "WarrantyLedger";
+
+
+            }
+        }
+    }
+
 }

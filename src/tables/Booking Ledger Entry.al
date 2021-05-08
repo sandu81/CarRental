@@ -48,14 +48,6 @@ table 52010 "CR Booking Ledger Entry"
             Caption = 'Car No.';
             TableRelation = "CR Car";
         }
-        field(75; "Booking Status"; Option)
-        {
-            OptionMembers = "Reservation","Open","Closed","Canceled";
-            OptionCaption = 'Reservation,Open,Closed,Canceled';
-            Caption = 'Booking Status';
-            DataClassification = ToBeClassified;
-
-        }
         field(80; "Start Date"; Date)
         {
             DataClassification = ToBeClassified;
@@ -131,28 +123,5 @@ table 52010 "CR Booking Ledger Entry"
             Clustered = true;
         }
     }
-
-    var
-        myInt: Integer;
-
-    trigger OnInsert()
-    begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
-    end;
 
 }

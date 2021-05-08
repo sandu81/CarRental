@@ -18,7 +18,7 @@ codeunit 52004 "CR Booking-Post (Yes/No)"
     procedure Code()
     begin
 
-        IF NOT CONFIRM(Text001, FALSE) THEN
+        IF NOT CONFIRM(ConfirmPostinglbl, FALSE) THEN
             EXIT;
         BookingPost.RunPost(BookingHeader);
         COMMIT;
@@ -26,6 +26,7 @@ codeunit 52004 "CR Booking-Post (Yes/No)"
 
     var
         BookingHeader: Record "CR Booking Header";
-        Text001: Label 'Do you want to post the booking?';
         BookingPost: Codeunit "CR Booking-Post";
+        ConfirmPostinglbl: Label 'Do you want to post the booking?';
+
 }

@@ -65,7 +65,6 @@ codeunit 52001 "CR Booking Jnl.-Post Line"
         BookingLedgerEntry."Document Date" := BookingJnlLine."Document Date";
         BookingLedgerEntry."Document No." := BookingJnlLine."Document No.";
         BookingLedgerEntry.Amount := BookingJnlLine.Amount;
-        BookingLedgerEntry."Booking Status" := BookingJnlLine."Booking Status";
         BookingLedgerEntry."Car No." := BookingJnlLine."Car No.";
         BookingLedgerEntry."Customer No." := BookingJnlLine."Customer No.";
         BookingLedgerEntry."Daily Rate" := BookingJnlLine."Daily Rate";

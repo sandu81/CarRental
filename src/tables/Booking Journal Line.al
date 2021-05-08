@@ -53,14 +53,6 @@ table 52012 "CR Booking Journal Line"
             Caption = 'Car No.';
             TableRelation = "CR Car";
         }
-        field(75; "Booking Status"; Option)
-        {
-            OptionMembers = "Reservation","Open","Closed","Canceled";
-            OptionCaption = 'Reservation,Open,Closed,Canceled';
-            Caption = 'Booking Status';
-            DataClassification = ToBeClassified;
-
-        }
         field(80; "Start Date"; Date)
         {
             DataClassification = ToBeClassified;
