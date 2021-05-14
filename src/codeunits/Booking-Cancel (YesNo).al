@@ -16,6 +16,9 @@ codeunit 52006 "CR Booking-Cancel (Yes/No)"
     end;
 
     procedure Code()
+    var
+        BookingCancel: Codeunit "CR Booking-Cancel";
+        ConfirmCancellbl: Label 'Do you want to cancel the booking?';
     begin
 
         IF NOT CONFIRM(ConfirmCancellbl, FALSE) THEN
@@ -26,7 +29,7 @@ codeunit 52006 "CR Booking-Cancel (Yes/No)"
 
     var
         PostedBookingHeader: Record "CR Posted Booking Header";
-        BookingCancel: Codeunit "CR Booking-Cancel";
-        ConfirmCancellbl: Label 'Do you want to cancel the booking?';
+
+
 
 }

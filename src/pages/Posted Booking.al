@@ -39,6 +39,10 @@ page 52011 "CR Posted Booking"
                 }
 
             }
+            part("Posted Booking Lines"; "CR Posted Booking Lines")
+            {
+                SubPageLink = "Document No." = field("No.");
+            }
             group("Customer Details")
             {
 
@@ -79,10 +83,6 @@ page 52011 "CR Posted Booking"
                     ApplicationArea = All;
                 }
 
-            }
-            part("Posted Booking Lines"; "CR Posted Booking Lines")
-            {
-                SubPageLink = "Document No." = field("No.");
             }
         }
     }

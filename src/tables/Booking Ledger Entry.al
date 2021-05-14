@@ -73,6 +73,16 @@ table 52010 "CR Booking Ledger Entry"
             DataClassification = ToBeClassified;
             Caption = 'Amount';
         }
+        field(120; "Is Cancelled"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Is Cancelled';
+        }
+        field(130; "Cancelling Entry No."; Integer)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Cancelling Entry No.';
+        }
 
         field(200; "Source Code"; Code[10])
         {
@@ -114,6 +124,7 @@ table 52010 "CR Booking Ledger Entry"
             end;
 
         }
+
     }
 
     keys

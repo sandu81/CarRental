@@ -8,6 +8,13 @@ codeunit 52000 "CR Booking Jnl.-Check Line"
     end;
 
     procedure RunCheck(var BookingJnlLine: Record "CR Booking Journal Line")
+    var
+        GLSetup: Record "General Ledger Setup";
+        UserSetup: Record "User Setup";
+        AllowPostingFrom: Date;
+        AllowPostingTo: Date;
+        NotClosingDatelbl: Label 'cannot be a closing date.';
+        NotWithinPostingDateRangelbl: Label 'is not within your range of allowed posting dates.';
     begin
         if BookingJnlLine.EmptyLine() then
             exit;
@@ -50,11 +57,5 @@ codeunit 52000 "CR Booking Jnl.-Check Line"
 
     end;
 
-    var
-        GLSetup: Record "General Ledger Setup";
-        UserSetup: Record "User Setup";
-        AllowPostingFrom: Date;
-        AllowPostingTo: Date;
-        NotClosingDatelbl: Label 'cannot be a closing date.';
-        NotWithinPostingDateRangelbl: Label 'is not within your range of allowed posting dates.';
+
 }

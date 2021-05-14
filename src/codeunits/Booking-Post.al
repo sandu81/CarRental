@@ -10,6 +10,12 @@ codeunit 52005 "CR Booking-Post"
     end;
 
     procedure RunPost(var Rec: Record "CR Booking Header")
+    var
+        PostedBookingLine: Record "CR Posted Booking Line";
+        SourceCodeSetup: Record "Source Code Setup";
+        NoSeriesMgt: Codeunit NoSeriesManagement;
+        NoVehicleslbl: Label 'Cannot post booking with no vehicles.';
+        LineCount: Integer;
     begin
 
         ClearAll();
@@ -26,9 +32,6 @@ codeunit 52005 "CR Booking-Post"
 
         if BookingLine.IsEmpty then
             Error(NoVehicleslbl);
-
-
-        //TODO Show progress with a dialog
 
         if BookingHeader."Posting No." = '' then begin
             BookingHeader.TestField("Posting No. Series");
@@ -91,6 +94,9 @@ codeunit 52005 "CR Booking-Post"
     end;
 
     procedure PostBookingJnlLine()
+    var
+        BookingJnlLine: Record "CR Booking Journal Line";
+        BookingJnlPostLine: Codeunit "CR Booking Jnl.-Post Line";
     begin
         BookingJnlLine.Init();
 
@@ -118,12 +124,6 @@ codeunit 52005 "CR Booking-Post"
         BookingHeader: Record "CR Booking Header";
         BookingLine: Record "CR Booking Line";
         PostedBookingHeader: Record "CR Posted Booking Header";
-        PostedBookingLine: Record "CR Posted Booking Line";
-        BookingJnlLine: Record "CR Booking Journal Line";
-        SourceCodeSetup: Record "Source Code Setup";
-        BookingJnlPostLine: Codeunit "CR Booking Jnl.-Post Line";
-        NoSeriesMgt: Codeunit NoSeriesManagement;
-        NoVehicleslbl: Label 'Cannot post booking with no vehicles.';
         SourceCode: Code[10];
-        LineCount: Integer;
+
 }

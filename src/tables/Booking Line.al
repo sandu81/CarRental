@@ -49,6 +49,8 @@ table 52008 "CR Booking Line"
             TableRelation = "CR Car" where("Car Type Code" = field("Car Type Code"));
 
             trigger OnValidate()
+            var
+                Car: Record "CR Car";
             begin
                 if "Car No." <> xRec."Car No." then
                     if "Car No." <> '' then begin
@@ -196,14 +198,6 @@ table 52008 "CR Booking Line"
         }
     }
 
-    var
-        Car: Record "CR Car";
-        BookingLine: Record "CR Booking Line";
-        BookingHeader: Record "CR Booking Header";
-        PostedBookingHeader: Record "CR Posted Booking Header";
-        PostedBookingLine: Record "CR Posted Booking Line";
-
-
     procedure ValidateDateFields()
     var
         PastDateErr: label 'Bookings can be made only for future dates.';
@@ -231,6 +225,10 @@ table 52008 "CR Booking Line"
 
     procedure CheckAvailability()
     var
+        BookingLine: Record "CR Booking Line";
+        BookingHeader: Record "CR Booking Header";
+        PostedBookingHeader: Record "CR Posted Booking Header";
+        PostedBookingLine: Record "CR Posted Booking Line";
         AlreadyBookedErr: label 'The selected car has already been booked for the period';
     begin
 

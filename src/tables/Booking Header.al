@@ -31,6 +31,8 @@ table 52007 "CR Booking Header"
             TableRelation = "Customer";
 
             trigger OnValidate()
+            var
+                Customer: Record "Customer";
             begin
 
                 if ("Customer No." <> xRec."Customer No.") then begin
@@ -105,6 +107,8 @@ table 52007 "CR Booking Header"
             Caption = 'Email';
 
             trigger OnValidate()
+            var
+                MailManagement: CodeUnit "Mail Management";
             begin
                 if "E-Mail" = '' then
                     exit;
@@ -215,6 +219,8 @@ table 52007 "CR Booking Header"
     end;
 
     trigger OnDelete()
+    var
+        BookingLine: Record "CR Booking Line";
     begin
 
         BookingLine.Reset();
@@ -263,16 +269,9 @@ table 52007 "CR Booking Header"
 
     var
         CarBookingSetup: Record "CR Car Booking Setup";
-        BookingLine: Record "CR Booking Line";
-        Customer: Record "Customer";
         PostCode: Record "Post Code";
         BookingHeader: Record "CR Booking Header";
-        MailManagement: CodeUnit "Mail Management";
         NoSeriesMgt: CodeUnit NoSeriesManagement;
-        i: Integer;
-
-
-
 
 }
 

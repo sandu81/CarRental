@@ -30,6 +30,10 @@ page 52008 "CR Booking"
                 }
 
             }
+            part("Booking Lines"; "CR Booking Lines")
+            {
+                SubPageLink = "Document No." = field("No.");
+            }
             group("Customer Details")
             {
 
@@ -70,10 +74,6 @@ page 52008 "CR Booking"
                     ApplicationArea = All;
                 }
 
-            }
-            part("Booking Lines"; "CR Booking Lines")
-            {
-                SubPageLink = "Document No." = field("No.");
             }
         }
     }

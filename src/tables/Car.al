@@ -39,6 +39,8 @@ table 52001 "CR Car"
             DataClassification = ToBeClassified;
 
             trigger OnValidate()
+            var
+                CarType: Record "CR Car Type";
             begin
                 if "Car Type Code" <> xRec."Car Type Code" then
                     if "Car Type Code" <> '' then begin
@@ -131,22 +133,12 @@ table 52001 "CR Car"
             DataClassification = ToBeClassified;
             TableRelation = "Vendor";
         }
-        field(180; "Booking Start Date Filter"; Date)
-        {
-            Caption = 'Booking Start';
-            FieldClass = FlowFilter;
-        }
-        field(190; "Booking End Date Filter"; Date)
-        {
-            Caption = 'Booking End';
-            FieldClass = FlowFilter;
-        }
 
-        field(200; "Total Revenue"; Decimal)
+        field(180; "Total Revenue"; Decimal)
         {
             Caption = 'Total Revenue';
             FieldClass = FlowField;
-            CalcFormula = Sum("CR Booking Ledger Entry".Amount where("Car No." = field("No."), "Start Date" = field("Booking Start Date Filter"), "End Date" = field("Booking End Date Filter")));
+            CalcFormula = Sum("CR Booking Ledger Entry".Amount where("Car No." = field("No.")));
         }
     }
 
@@ -160,8 +152,6 @@ table 52001 "CR Car"
 
     var
         CarBookingSetup: Record "CR Car Booking Setup";
-        CarType: Record "CR Car Type";
-        Car: Record "CR Car";
         NoSeriesMgt: CodeUnit NoSeriesManagement;
 
     trigger OnInsert()
@@ -178,6 +168,8 @@ table 52001 "CR Car"
     end;
 
     procedure AssistEdit(): boolean
+    var
+        Car: Record "CR Car";
     begin
 
         Car := Rec;

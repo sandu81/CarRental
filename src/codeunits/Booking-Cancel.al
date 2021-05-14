@@ -64,11 +64,37 @@ codeunit 52007 "CR Booking-Cancel"
 
                 CancelledBookingLine.Insert();
 
+                PostBookingJnlLine();
+
             until PostedBookingLine.Next() = 0;
         end;
 
 
         Rec := PostedBookingHeader;
+
+    end;
+
+    procedure PostBookingJnlLine()
+    begin
+        BookingJnlLine.Init();
+
+        BookingJnlLine."Booking No." := CancelledBookingHeader."No.";
+        BookingJnlLine."Posting Date" := CancelledBookingHeader."Posting Date";
+        BookingJnlLine."Document Date" := CancelledBookingHeader."Document Date";
+        BookingJnlLine."Document No." := CancelledBookingHeader."No.";
+        BookingJnlLine."Customer No." := CancelledBookingHeader."Customer No.";
+        BookingJnlLine."Source Code" := SourceCode;
+        //BookingJnlLine."Posting No. Series" := CancelledBookingHeader."Posting No. Series";
+        BookingJnlLine.Description := CancelledBookingHeader."Customer Name";
+
+        BookingJnlLine."Car No." := CancelledBookingLine."Car No.";
+        BookingJnlLine."Start Date" := CancelledBookingLine."Start Date";
+        BookingJnlLine."End Date" := CancelledBookingLine."End Date";
+        BookingJnlLine.Amount := CancelledBookingLine.Amount;
+        BookingJnlLine."Daily Rate" := CancelledBookingLine."Daily Rate";
+        BookingJnlLine."No. of Days" := CancelledBookingLine."No. of Days";
+
+        BookingJnlPostLine.RunWithCheck(BookingJnlLine);
 
     end;
 
@@ -79,6 +105,8 @@ codeunit 52007 "CR Booking-Cancel"
         PostedBookingHeader: Record "CR Posted Booking Header";
         PostedBookingLine: Record "CR Posted Booking Line";
         SourceCodeSetup: Record "Source Code Setup";
+        BookingJnlLine: Record "CR Booking Journal Line";
+        BookingJnlPostLine: Codeunit "CR Booking Jnl.-Post Line";
         NoSeriesMgt: Codeunit NoSeriesManagement;
         SourceCode: Code[10];
         LineCount: Integer;

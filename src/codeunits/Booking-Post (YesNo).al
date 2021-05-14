@@ -16,6 +16,9 @@ codeunit 52004 "CR Booking-Post (Yes/No)"
     end;
 
     procedure Code()
+    var
+        BookingPost: Codeunit "CR Booking-Post";
+        ConfirmPostinglbl: Label 'Do you want to post the booking?';
     begin
 
         IF NOT CONFIRM(ConfirmPostinglbl, FALSE) THEN
@@ -26,7 +29,6 @@ codeunit 52004 "CR Booking-Post (Yes/No)"
 
     var
         BookingHeader: Record "CR Booking Header";
-        BookingPost: Codeunit "CR Booking-Post";
-        ConfirmPostinglbl: Label 'Do you want to post the booking?';
+
 
 }

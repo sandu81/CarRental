@@ -12,7 +12,6 @@ report 52000 "CR Car Profitability"
     {
         dataitem(Car; "CR Car")
         {
-            RequestFilterFields = "No.", "Booking Start Date Filter", "Booking End Date Filter";
             column(Car_No; "No.")
             {
             }
@@ -40,9 +39,49 @@ report 52000 "CR Car Profitability"
             {
 
             }
+            column(StartDate; StartDAte)
+            {
+
+            }
+            column(EndDate; EndDate)
+            {
+
+            }
+            trigger OnPreDataItem()
+            var
+                BookingLedgerEntry: Record "CR Booking Ledger Entry";
+                CarList: Record "CR Car";
+                BookedCarFilter: Text;
+            begin
+
+
+                IF CarList.FindSet() then begin
+                    repeat
+                        BookingLedgerEntry.Reset();
+                        BookingLedgerEntry.SetRange("Car No.", CarList."No.");
+                        BookingLedgerEntry.SetRange("Start Date", StartDate, EndDate);
+
+
+                        if not BookingLedgerEntry.IsEmpty() then
+                            BookedCarFilter += '=' + CarList."No." + '|';
+                    until CarList.Next() = 0;
+                end;
+
+                if BookedCarFilter <> '' then begin
+                    BookedCarFilter := DelStr(BookedCarFilter, StrLen(BookedCarFilter), 1);
+                    SetFilter(Car."No.", BookedCarFilter);
+
+                end;
+
+
+            end;
 
         }
+
+
     }
+
+
 
     requestpage
     {
@@ -52,7 +91,14 @@ report 52000 "CR Car Profitability"
             {
                 group(GroupName)
                 {
-
+                    field("Start Date"; StartDate)
+                    {
+                        ApplicationArea = All;
+                    }
+                    field("End Date"; EndDate)
+                    {
+                        ApplicationArea = All;
+                    }
                 }
             }
         }
@@ -72,5 +118,7 @@ report 52000 "CR Car Profitability"
 
     var
         ReportTitle_CaptionLbl: Label 'Car Profitability Report';
+        StartDate: Date;
+        EndDate: Date;
 
 }
