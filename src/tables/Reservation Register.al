@@ -1,7 +1,7 @@
-table 52011 "CR Booking Register"
+table 52011 "CR Reservation Register"
 {
     DataClassification = ToBeClassified;
-    Caption = 'Booking Register';
+    Caption = 'Reservation Register';
 
     fields
     {

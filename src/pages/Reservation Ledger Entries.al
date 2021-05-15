@@ -1,11 +1,11 @@
-page 52012 "CR Booking Ledger Entries"
+page 52012 "CR Reservation Ledger Entries"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Booking Ledger Entry";
+    SourceTable = "CR Reservation Ledger Entry";
     //Editable = false;
-    Caption = 'Booking Ledger Entries';
+    Caption = 'Reservation Ledger Entries';
 
     layout
     {

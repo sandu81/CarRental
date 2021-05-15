@@ -1,8 +1,8 @@
 
-table 52007 "CR Booking Header"
+table 52007 "CR Reservation Header"
 {
     DataClassification = ToBeClassified;
-    Caption = 'Booking Header';
+    Caption = 'Reservation Header';
 
     fields
     {
@@ -15,9 +15,9 @@ table 52007 "CR Booking Header"
             begin
                 if "No." <> xRec."No." then begin
 
-                    CarBookingSetup.Get();
+                    CarRentalSetup.Get();
 
-                    NoSeriesMgt.TestManual(CarBookingSetup."Booking Nos.");
+                    NoSeriesMgt.TestManual(CarRentalSetup."Booking Nos.");
 
                     "No. Series" := '';
                 end;
@@ -69,32 +69,53 @@ table 52007 "CR Booking Header"
         {
             DataClassification = ToBeClassified;
             Caption = 'City';
+            TableRelation = IF ("Country/Region Code" = CONST()) "Post Code".City ELSE
+            IF ("Country/Region Code" = FILTER(<> '')) "Post Code".City WHERE("Country/Region Code" = FIELD("Country/Region Code"));
 
             trigger OnValidate()
             begin
                 PostCode.ValidateCity(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GuiAllowed);
             end;
+
+            trigger OnLookup()
+            begin
+                PostCode.LookupPostCode(City, "Post Code", County, "Country/Region Code");
+            end;
         }
         field(55; County; Text[30])
         {
             DataClassification = ToBeClassified;
-            Caption = 'County';
+            Caption = 'State';
+
+
         }
         field(60; "Post Code"; Code[20])
         {
             DataClassification = ToBeClassified;
             Caption = 'Post Code';
+            TableRelation = IF ("Country/Region Code" = CONST()) "Post Code" ELSE
+            IF ("Country/Region Code" = FILTER(<> '')) "Post Code" WHERE("Country/Region Code" = FIELD("Country/Region Code"));
 
             trigger OnValidate()
             begin
                 PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GuiAllowed);
 
             end;
+
+            trigger OnLookup()
+            begin
+                PostCode.LookupPostCode(City, "Post Code", County, "Country/Region Code");
+            end;
         }
         field(65; "Country/Region Code"; Code[10])
         {
             DataClassification = ToBeClassified;
             Caption = 'Country/Region Code';
+            TableRelation = "Country/Region";
+            trigger OnValidate()
+            begin
+                PostCode.CheckClearPostCodeCityCounty(City, "Post Code", County, "Country/Region Code", xRec."Country/Region Code");
+            end;
         }
         field(70; "Phone No."; Text[30])
         {
@@ -132,7 +153,7 @@ table 52007 "CR Booking Header"
 
             Caption = 'Total Price';
             FieldClass = FlowField;
-            CalcFormula = Sum("CR Booking Line".Amount where("Document No." = field("No.")));
+            CalcFormula = Sum("CR Reservation Line".Amount where("Document No." = field("No.")));
             Editable = false;
         }
         field(130; "No. Series"; Code[10])
@@ -153,12 +174,12 @@ table 52007 "CR Booking Header"
             begin
 
                 if "Posting No. Series" <> '' then begin
-                    CarBookingSetup.Get();
+                    CarRentalSetup.Get();
 
-                    CarBookingSetup.TestField("Booking Nos.");
-                    CarBookingSetup.TestField("Posted Booking Nos.");
+                    CarRentalSetup.TestField("Booking Nos.");
+                    CarRentalSetup.TestField("Posted Booking Nos.");
 
-                    NoSeriesMgt.TestSeries(CarBookingSetup."Posted Booking Nos.", "Posting No. Series");
+                    NoSeriesMgt.TestSeries(CarRentalSetup."Posted Booking Nos.", "Posting No. Series");
 
                 end;
 
@@ -169,19 +190,19 @@ table 52007 "CR Booking Header"
 
             trigger OnLookup()
             begin
-                BookingHeader := Rec;
+                ReservationHeader := Rec;
 
-                CarBookingSetup.Get();
+                CarRentalSetup.Get();
 
-                CarBookingSetup.TestField("Booking Nos.");
-                CarBookingSetup.TestField("Posted Booking Nos.");
+                CarRentalSetup.TestField("Booking Nos.");
+                CarRentalSetup.TestField("Posted Booking Nos.");
 
-                if NoSeriesMgt.LookupSeries(CarBookingSetup."Posted Booking Nos.", BookingHeader."Posting No. Series") then begin
+                if NoSeriesMgt.LookupSeries(CarRentalSetup."Posted Booking Nos.", ReservationHeader."Posting No. Series") then begin
 
                     Validate("Posting No. Series");
                 end;
 
-                Rec := BookingHeader;
+                Rec := ReservationHeader;
 
 
 
@@ -207,11 +228,11 @@ table 52007 "CR Booking Header"
     begin
 
         if "No." = '' then begin
-            CarBookingSetup.Get();
+            CarRentalSetup.Get();
 
-            CarBookingSetup.TestField("Booking Nos.");
+            CarRentalSetup.TestField("Booking Nos.");
 
-            NoSeriesMgt.InitSeries(CarBookingSetup."Booking Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+            NoSeriesMgt.InitSeries(CarRentalSetup."Booking Nos.", xRec."No. Series", 0D, "No.", "No. Series");
         end;
 
         InitRecord();
@@ -220,14 +241,14 @@ table 52007 "CR Booking Header"
 
     trigger OnDelete()
     var
-        BookingLine: Record "CR Booking Line";
+        ReservationLine: Record "CR Reservation Line";
     begin
 
-        BookingLine.Reset();
+        ReservationLine.Reset();
 
-        BookingLine.SetRange("Document No.", "No.");
+        ReservationLine.SetRange("Document No.", "No.");
 
-        BookingLine.DeleteAll(true);
+        ReservationLine.DeleteAll(true);
 
 
     end;
@@ -240,23 +261,23 @@ table 52007 "CR Booking Header"
 
         "Document Date" := WorkDate();
 
-        CarBookingSetup.Get();
-        NoSeriesMgt.SetDefaultSeries("Posting No. Series", CarBookingSetup."Posted Booking Nos.");
+        CarRentalSetup.Get();
+        NoSeriesMgt.SetDefaultSeries("Posting No. Series", CarRentalSetup."Posted Booking Nos.");
 
     end;
 
     procedure AssistEdit(): boolean
     begin
 
-        BookingHeader := Rec;
+        ReservationHeader := Rec;
 
-        CarBookingSetup.Get();
+        CarRentalSetup.Get();
 
-        CarBookingSetup.TestField("Booking Nos.");
+        CarRentalSetup.TestField("Booking Nos.");
 
-        if NoSeriesMgt.SelectSeries(CarBookingSetup."Booking Nos.", xRec."No. Series", BookingHeader."No. Series") then begin
-            NoSeriesMgt.SetSeries(BookingHeader."No.");
-            Rec := BookingHeader;
+        if NoSeriesMgt.SelectSeries(CarRentalSetup."Booking Nos.", xRec."No. Series", ReservationHeader."No. Series") then begin
+            NoSeriesMgt.SetSeries(ReservationHeader."No.");
+            Rec := ReservationHeader;
 
             exit(true);
         end;
@@ -268,9 +289,9 @@ table 52007 "CR Booking Header"
 
 
     var
-        CarBookingSetup: Record "CR Car Booking Setup";
+        CarRentalSetup: Record "CR Car Booking Setup";
         PostCode: Record "Post Code";
-        BookingHeader: Record "CR Booking Header";
+        ReservationHeader: Record "CR Reservation Header";
         NoSeriesMgt: CodeUnit NoSeriesManagement;
 
 }

@@ -1,10 +1,10 @@
-page 52016 "CR Booking Journal Batches"
+page 52016 "CR Reservation Journal Batches"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Booking Journal Batch";
-    Caption = 'Booking Journal Batches';
+    SourceTable = "CR Reservation Journal Batch";
+    Caption = 'Reservation Journal Batches';
 
     layout
     {

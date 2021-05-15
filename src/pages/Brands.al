@@ -31,7 +31,7 @@ page 52004 "CR Brands"
             action("Models")
             {
                 ApplicationArea = All;
-                RunObject = codeunit "CR Booking-Show Models";
+                RunObject = codeunit "CR Show Models";
                 Image = "WarrantyLedger";
 
 

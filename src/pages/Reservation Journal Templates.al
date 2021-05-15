@@ -1,9 +1,9 @@
-page 52015 "CR Booking Journal Templates"
+page 52015 "CR Reservation Jnl. Templates"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Booking Journal Template";
+    SourceTable = "CR Reservation Jnl. Template";
     Caption = 'Booking Journal Templates';
 
     layout

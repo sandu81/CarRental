@@ -1,13 +1,13 @@
-codeunit 52000 "CR Booking Jnl.-Check Line"
+codeunit 52000 "CR Reservation Jnl.-Check Line"
 {
-    TableNo = "CR Booking Journal Line";
+    TableNo = "CR Reservation Journal Line";
 
     trigger OnRun()
     begin
         RunCheck(Rec);
     end;
 
-    procedure RunCheck(var BookingJnlLine: Record "CR Booking Journal Line")
+    procedure RunCheck(var ReservationJnlLine: Record "CR Reservation Journal Line")
     var
         GLSetup: Record "General Ledger Setup";
         UserSetup: Record "User Setup";
@@ -16,17 +16,17 @@ codeunit 52000 "CR Booking Jnl.-Check Line"
         NotClosingDatelbl: Label 'cannot be a closing date.';
         NotWithinPostingDateRangelbl: Label 'is not within your range of allowed posting dates.';
     begin
-        if BookingJnlLine.EmptyLine() then
+        if ReservationJnlLine.EmptyLine() then
             exit;
 
-        BookingJnlLine.TestField("Posting Date");
-        BookingJnlLine.TestField("Booking No.");
-        BookingJnlLine.TestField("Car No.");
-        BookingJnlLine.TestField("Customer No.");
+        ReservationJnlLine.TestField("Posting Date");
+        ReservationJnlLine.TestField("Booking No.");
+        ReservationJnlLine.TestField("Car No.");
+        ReservationJnlLine.TestField("Customer No.");
 
 
-        if BookingJnlLine."Posting Date" = ClosingDate(BookingJnlLine."Posting Date") then
-            BookingJnlLine.FieldError("Posting Date", NotClosingDatelbl);
+        if ReservationJnlLine."Posting Date" = ClosingDate(ReservationJnlLine."Posting Date") then
+            ReservationJnlLine.FieldError("Posting Date", NotClosingDatelbl);
 
         if (AllowPostingFrom = 0D) AND (AllowPostingTo = 0D) then begin
 
@@ -48,12 +48,12 @@ codeunit 52000 "CR Booking Jnl.-Check Line"
                 AllowPostingTo := 99991231D;
         end;
 
-        if (BookingJnlLine."Posting Date" < AllowPostingFrom) OR (BookingJnlLine."Posting Date" > AllowPostingTo) then
-            BookingJnlLine.FieldError("Posting Date", NotWithinPostingDateRangelbl);
+        if (ReservationJnlLine."Posting Date" < AllowPostingFrom) OR (ReservationJnlLine."Posting Date" > AllowPostingTo) then
+            ReservationJnlLine.FieldError("Posting Date", NotWithinPostingDateRangelbl);
 
-        if (BookingJnlLine."Document Date" <> 0D) then
-            if (BookingJnlLine."Document Date" = ClosingDate(BookingJnlLine."Document Date")) then
-                BookingJnlLine.FieldError("Document Date", NotClosingDatelbl);
+        if (ReservationJnlLine."Document Date" <> 0D) then
+            if (ReservationJnlLine."Document Date" = ClosingDate(ReservationJnlLine."Document Date")) then
+                ReservationJnlLine.FieldError("Document Date", NotClosingDatelbl);
 
     end;
 

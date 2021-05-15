@@ -1,10 +1,10 @@
-page 52017 "CR Booking Journal"
+page 52017 "CR Reservation Journal"
 {
     PageType = Worksheet;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Booking Journal Line";
-    Caption = 'Booking Journal';
+    SourceTable = "CR Reservation Journal Line";
+    Caption = 'Reservation Journal';
 
     layout
     {

@@ -1,8 +1,8 @@
-page 52009 "CR Booking Lines"
+page 52014 "CR Posted Reservation Lines"
 {
     PageType = ListPart;
-    SourceTable = "CR Booking Line";
-    Caption = 'Lines';
+    SourceTable = "CR Posted Reservation Line";
+    Caption = 'Posted Lines';
     AutoSplitKey = true;
 
     layout

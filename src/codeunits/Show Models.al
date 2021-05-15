@@ -1,4 +1,4 @@
-codeunit 52008 "CR Booking-Show Models"
+codeunit 52008 "CR Show Models"
 {
     TableNo = "CR Brand";
 

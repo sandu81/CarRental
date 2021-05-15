@@ -1,7 +1,7 @@
-table 52015 "CR Posted Booking Line"
+table 52015 "CR Posted Reservation Line"
 {
     DataClassification = ToBeClassified;
-    Caption = 'Posted Booking Line';
+    Caption = 'Posted Reservation Line';
 
     fields
     {
@@ -9,7 +9,7 @@ table 52015 "CR Posted Booking Line"
         {
             DataClassification = ToBeClassified;
             Caption = 'Document No.';
-            TableRelation = "CR Posted Booking Header";
+            TableRelation = "CR Posted Reservation Header";
         }
         field(20; "Line No."; Integer)
         {

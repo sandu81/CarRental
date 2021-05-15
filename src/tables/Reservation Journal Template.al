@@ -1,7 +1,7 @@
-table 52016 "CR Booking Journal Template"
+table 52016 "CR Reservation Jnl. Template"
 {
     DataClassification = ToBeClassified;
-    Caption = 'Booking Journal Template';
+    Caption = 'Reservation Journal Template';
 
     fields
     {

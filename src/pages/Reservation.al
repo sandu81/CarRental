@@ -1,11 +1,10 @@
-page 52011 "CR Posted Booking"
+page 52008 "CR Reservation"
 {
     PageType = Document;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Posted Booking Header";
-    Caption = 'Posted Booking';
-    //Editable = false;
+    SourceTable = "CR Reservation Header";
+    Caption = 'Reservations';
 
     layout
     {
@@ -29,17 +28,9 @@ page 52011 "CR Posted Booking"
                 {
                     ApplicationArea = All;
                 }
-                field("Is Cancelled"; "Is Cancelled")
-                {
-                    ApplicationArea = All;
-                }
-                field("Cancelling No."; "Cancelling No.")
-                {
-                    ApplicationArea = All;
-                }
 
             }
-            part("Posted Booking Lines"; "CR Posted Booking Lines")
+            part("Reservation Lines"; "CR Reservation Lines")
             {
                 SubPageLink = "Document No." = field("No.");
             }
@@ -91,18 +82,18 @@ page 52011 "CR Posted Booking"
     {
         area(Processing)
         {
-            action(Cancel)
+            action(Post)
             {
                 ApplicationArea = All;
-                Caption = 'Cancel';
-                Image = Cancel;
+                Caption = 'P&ost';
+                Image = PostDocument;
                 Promoted = true;
                 PromotedCategory = Process;
                 ShortcutKey = F9;
-                RunObject = codeunit "CR Booking-Cancel (Yes/No)";
-                Visible = not "Is Cancelled";
+                RunObject = codeunit "CR Reservation-Post (Yes/No)";
 
             }
         }
     }
+
 }

@@ -1,21 +1,16 @@
-table 52012 "CR Booking Journal Line"
+table 52010 "CR Reservation Ledger Entry"
 {
     DataClassification = ToBeClassified;
-    Caption = 'Booking Journal';
+    Caption = 'Reservation Ledger Entry';
 
     fields
     {
-        field(10; "Journal Template Name"; Code[10])
+        field(10; "Entry No."; Integer)
         {
             DataClassification = ToBeClassified;
-            Caption = 'Journal Template Name';
-            TableRelation = "CR Booking Journal Template";
+            Caption = 'Entry No.';
         }
-        field(20; "Line No."; Integer)
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'Line No.';
-        }
+
         field(25; Description; Text[50])
         {
             DataClassification = ToBeClassified;
@@ -78,26 +73,17 @@ table 52012 "CR Booking Journal Line"
             DataClassification = ToBeClassified;
             Caption = 'Amount';
         }
-        field(120; "Document No."; Code[20])
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'Document No.';
-        }
-        field(130; "Posting No. Series"; Code[10])
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'Posting No. Series';
-        }
-        field(140; "Is Cancelled"; Boolean)
+        field(120; "Is Cancelled"; Boolean)
         {
             DataClassification = ToBeClassified;
             Caption = 'Is Cancelled';
         }
-        field(150; "Cancelling Entry No."; Integer)
+        field(130; "Cancelling Entry No."; Integer)
         {
             DataClassification = ToBeClassified;
             Caption = 'Cancelling Entry No.';
         }
+
         field(200; "Source Code"; Code[10])
         {
             DataClassification = ToBeClassified;
@@ -108,27 +94,45 @@ table 52012 "CR Booking Journal Line"
             DataClassification = ToBeClassified;
             Caption = 'Reason Code';
         }
-
         field(400; "Journal Batch Name"; Code[10])
         {
             DataClassification = ToBeClassified;
             Caption = 'Journal Batch Name';
-            TableRelation = "CR Booking Journal Batch";
         }
+        field(405; "No. Series"; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'No. Series';
+        }
+        field(406; "Document No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Document No.';
+        }
+        field(410; "User ID"; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'User ID';
+            TableRelation = User."User Name";
+            ValidateTableRelation = false;
+
+            trigger OnValidate()
+            var
+                UserMgt: Codeunit "User Management";
+            begin
+                UserMgt.LookupUserID("User ID");
+            end;
+
+        }
+
     }
 
     keys
     {
-        key(PK; "Journal Template Name", "Journal Batch Name", "Line No.")
+        key(PK; "Entry No.")
         {
             Clustered = true;
         }
     }
-
-    procedure EmptyLine(): Boolean
-    begin
-        Exit("Customer No." = '');
-        Exit("Car No." = '');
-    end;
 
 }

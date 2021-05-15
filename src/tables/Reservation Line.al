@@ -1,7 +1,7 @@
-table 52008 "CR Booking Line"
+table 52008 "CR Reservation Line"
 {
     DataClassification = ToBeClassified;
-    Caption = 'Booking Line';
+    Caption = 'Reservation Line';
 
     fields
     {
@@ -9,7 +9,7 @@ table 52008 "CR Booking Line"
         {
             DataClassification = ToBeClassified;
             Caption = 'Document No.';
-            TableRelation = "CR Booking Header";
+            TableRelation = "CR Reservation Header";
         }
         field(20; "Line No."; Integer)
         {
@@ -200,7 +200,7 @@ table 52008 "CR Booking Line"
 
     procedure ValidateDateFields()
     var
-        PastDateErr: label 'Bookings can be made only for future dates.';
+        PastDateErr: label 'Reservations can be made only for future dates.';
         DateRangeErr: label 'End date has to be greater than start date';
 
     begin

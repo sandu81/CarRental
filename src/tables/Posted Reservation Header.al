@@ -1,8 +1,8 @@
 
-table 52014 "CR Posted Booking Header"
+table 52014 "CR Posted Reservation Header"
 {
     DataClassification = ToBeClassified;
-    Caption = 'Posted Booking Header';
+    Caption = 'Posted Reservation Header';
 
     fields
     {
@@ -79,7 +79,7 @@ table 52014 "CR Posted Booking Header"
 
             Caption = 'Total Price';
             FieldClass = FlowField;
-            CalcFormula = Sum("CR Posted Booking Line".Amount where("Document No." = field("No.")));
+            CalcFormula = Sum("CR Posted Reservation Line".Amount where("Document No." = field("No.")));
             Editable = false;
         }
         field(130; "No. Series"; Code[10])

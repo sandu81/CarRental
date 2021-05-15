@@ -1,11 +1,11 @@
-page 52013 "CR Booking Registers"
+page 52013 "CR Reservation Registers"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Booking Register";
+    SourceTable = "CR Reservation Register";
     //Editable = false;
-    Caption = 'Booking Registers';
+    Caption = 'Reservation Registers';
 
     layout
     {
@@ -50,10 +50,10 @@ page 52013 "CR Booking Registers"
     {
         area("Processing")
         {
-            action("Booking Ledger")
+            action("Reservation Ledger")
             {
                 ApplicationArea = All;
-                RunObject = codeunit "CR Booking-Show Ledger";
+                RunObject = codeunit "CR Show Ledgers";
                 Image = "WarrantyLedger";
 
 

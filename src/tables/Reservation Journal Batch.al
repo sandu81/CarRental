@@ -1,7 +1,7 @@
-table 52017 "CR Booking Journal Batch"
+table 52017 "CR Reservation Journal Batch"
 {
     DataClassification = ToBeClassified;
-    Caption = 'Booking Journal Batch';
+    Caption = 'Reservation Journal Batch';
 
     fields
     {
@@ -9,7 +9,7 @@ table 52017 "CR Booking Journal Batch"
         {
             DataClassification = ToBeClassified;
             Caption = 'Journal Template Name';
-            TableRelation = "CR Booking Journal Template";
+            TableRelation = "CR Reservation Jnl. Template";
         }
         field(2; Name; Code[10])
         {

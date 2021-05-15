@@ -11,6 +11,7 @@ table 52001 "CR Car"
             Caption = 'No.';
             DataClassification = ToBeClassified;
 
+
             trigger OnValidate()
             begin
                 if "No." <> xRec."No." then begin
@@ -21,6 +22,7 @@ table 52001 "CR Car"
                     "No. Series" := '';
                 end;
             end;
+
         }
         field(20; Name; Text[100])
         {
@@ -138,7 +140,7 @@ table 52001 "CR Car"
         {
             Caption = 'Total Revenue';
             FieldClass = FlowField;
-            CalcFormula = Sum("CR Booking Ledger Entry".Amount where("Car No." = field("No.")));
+            CalcFormula = Sum("CR Reservation Ledger Entry".Amount where("Car No." = field("No."), "Is Cancelled" = const(false)));
         }
     }
 

@@ -49,7 +49,7 @@ report 52000 "CR Car Profitability"
             }
             trigger OnPreDataItem()
             var
-                BookingLedgerEntry: Record "CR Booking Ledger Entry";
+                ReservationLedgerEntry: Record "CR Reservation Ledger Entry";
                 CarList: Record "CR Car";
                 BookedCarFilter: Text;
             begin
@@ -57,12 +57,12 @@ report 52000 "CR Car Profitability"
 
                 IF CarList.FindSet() then begin
                     repeat
-                        BookingLedgerEntry.Reset();
-                        BookingLedgerEntry.SetRange("Car No.", CarList."No.");
-                        BookingLedgerEntry.SetRange("Start Date", StartDate, EndDate);
+                        ReservationLedgerEntry.Reset();
+                        ReservationLedgerEntry.SetRange("Car No.", CarList."No.");
+                        ReservationLedgerEntry.SetRange("Start Date", StartDate, EndDate);
 
 
-                        if not BookingLedgerEntry.IsEmpty() then
+                        if not ReservationLedgerEntry.IsEmpty() then
                             BookedCarFilter += '=' + CarList."No." + '|';
                     until CarList.Next() = 0;
                 end;
