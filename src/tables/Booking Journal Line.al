@@ -88,6 +88,16 @@ table 52012 "CR Booking Journal Line"
             DataClassification = ToBeClassified;
             Caption = 'Posting No. Series';
         }
+        field(140; "Is Cancelled"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Is Cancelled';
+        }
+        field(150; "Cancelling Entry No."; Integer)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Cancelling Entry No.';
+        }
         field(200; "Source Code"; Code[10])
         {
             DataClassification = ToBeClassified;

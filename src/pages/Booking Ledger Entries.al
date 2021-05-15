@@ -4,7 +4,7 @@ page 52012 "CR Booking Ledger Entries"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Booking Ledger Entry";
-    Editable = false;
+    //Editable = false;
     Caption = 'Booking Ledger Entries';
 
     layout
@@ -54,6 +54,14 @@ page 52012 "CR Booking Ledger Entries"
                     ApplicationArea = All;
                 }
                 field("Amount"; "Amount")
+                {
+                    ApplicationArea = All;
+                }
+                field("Is Cancelled"; "Is Cancelled")
+                {
+                    ApplicationArea = All;
+                }
+                field("Cancelling Entry No."; "Cancelling Entry No.")
                 {
                     ApplicationArea = All;
                 }

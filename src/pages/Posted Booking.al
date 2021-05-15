@@ -5,7 +5,7 @@ page 52011 "CR Posted Booking"
     UsageCategory = Administration;
     SourceTable = "CR Posted Booking Header";
     Caption = 'Posted Booking';
-    Editable = false;
+    //Editable = false;
 
     layout
     {

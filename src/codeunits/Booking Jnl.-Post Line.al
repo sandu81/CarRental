@@ -19,11 +19,6 @@ codeunit 52001 "CR Booking Jnl.-Post Line"
     end;
 
     procedure Code()
-    var
-        BookingLedgerEntry: Record "CR Booking Ledger Entry";
-        BookingRegister: Record "CR Booking Register";
-        BookingJnlCheckLine: Codeunit "CR Booking Jnl.-Check Line";
-        NextEntryNo: Integer;
     begin
 
         if BookingJnlLine.EmptyLine() then
@@ -81,6 +76,7 @@ codeunit 52001 "CR Booking Jnl.-Post Line"
         BookingLedgerEntry."Source Code" := BookingJnlLine."Source Code";
         BookingLedgerEntry."Reason Code" := BookingJnlLine."Reason Code";
         BookingLedgerEntry."No. Series" := BookingJnlLine."Posting No. Series";
+        BookingLedgerEntry."Is Cancelled" := BookingJnlLine."Is Cancelled";
         BookingLedgerEntry."User ID" := UserId;
         BookingLedgerEntry."Entry No." := NextEntryNo;
         BookingLedgerEntry.Insert();
@@ -92,6 +88,10 @@ codeunit 52001 "CR Booking Jnl.-Post Line"
 
     var
         BookingJnlLine: Record "CR Booking Journal Line";
+        BookingRegister: Record "CR Booking Register";
+        BookingLedgerEntry: Record "CR Booking Ledger Entry";
+        BookingJnlCheckLine: Codeunit "CR Booking Jnl.-Check Line";
+        NextEntryNo: Integer;
 
 
 

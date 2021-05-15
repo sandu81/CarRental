@@ -128,6 +128,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Line - Field Booking No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 760430193 - Field 2732177939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancelling Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Line - Field Cancelling Entry No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 760430193 - Field 4014478313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -162,6 +167,11 @@
           <source>End Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Line - Field End Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 760430193 - Field 1582121115 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Is Cancelled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Journal Line - Field Is Cancelled - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 760430193 - Field 2704330142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Journal Batch Name</source>
@@ -238,6 +248,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Ledger Entry - Field Booking No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 577017651 - Field 2732177939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancelling Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Ledger Entry - Field Cancelling Entry No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 577017651 - Field 4014478313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -277,6 +292,11 @@
           <source>Entry No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Ledger Entry - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 577017651 - Field 1582121115 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Is Cancelled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CR Booking Ledger Entry - Field Is Cancelled - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 577017651 - Field 2704330142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Journal Batch Name</source>
@@ -918,30 +938,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CR Posted Booking Line - Field Year - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2239500453 - NamedType 3397562100" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2239500453 - Method 1609300185 - NamedType 3397562100" size-unit="char" translate="yes" xml:space="preserve">
           <source>cannot be a closing date.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking Jnl.-Check Line - NamedType NotClosingDatelbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking Jnl.-Check Line - Method RunCheck - NamedType NotClosingDatelbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2239500453 - NamedType 3051153235" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2239500453 - Method 1609300185 - NamedType 3051153235" size-unit="char" translate="yes" xml:space="preserve">
           <source>is not within your range of allowed posting dates.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking Jnl.-Check Line - NamedType NotWithinPostingDateRangelbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking Jnl.-Check Line - Method RunCheck - NamedType NotWithinPostingDateRangelbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3947599941 - NamedType 953363338" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 3947599941 - Method 3004954119 - NamedType 953363338" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to cancel the booking?</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Cancel (Yes/No) - NamedType ConfirmCancellbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Cancel (Yes/No) - Method Code - NamedType ConfirmCancellbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 989474167 - NamedType 2088026532" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 989474167 - Method 3022018771 - NamedType 2088026532" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cannot post booking with no vehicles.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Post - NamedType NoVehicleslbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Post - Method RunPost - NamedType NoVehicleslbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2208946911 - NamedType 2397197700" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2208946911 - Method 3004954119 - NamedType 2397197700" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to post the booking?</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Post (Yes/No) - NamedType ConfirmPostinglbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Post (Yes/No) - Method Code - NamedType ConfirmPostinglbl</note>
         </trans-unit>
         <trans-unit id="Page 714931653 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cars</source>

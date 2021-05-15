@@ -96,7 +96,7 @@ codeunit 52005 "CR Booking-Post"
     procedure PostBookingJnlLine()
     var
         BookingJnlLine: Record "CR Booking Journal Line";
-        BookingJnlPostLine: Codeunit "CR Booking Jnl.-Post Line";
+
     begin
         BookingJnlLine.Init();
 
@@ -124,6 +124,7 @@ codeunit 52005 "CR Booking-Post"
         BookingHeader: Record "CR Booking Header";
         BookingLine: Record "CR Booking Line";
         PostedBookingHeader: Record "CR Posted Booking Header";
+        BookingJnlPostLine: Codeunit "CR Booking Jnl.-Post Line";
         SourceCode: Code[10];
 
 }

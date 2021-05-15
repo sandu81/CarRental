@@ -4,7 +4,7 @@ page 52013 "CR Booking Registers"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Booking Register";
-    Editable = false;
+    //Editable = false;
     Caption = 'Booking Registers';
 
     layout
