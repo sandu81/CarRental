@@ -107,9 +107,18 @@ page 52020 "CR Avilable Car List"
             action(Book)
             {
                 ApplicationArea = All;
+                Caption = 'Book';
+                Image = PostDocument;
+                Promoted = true;
+                PromotedCategory = Process;
+                RunObject = codeunit "CR New Reservation";
 
                 trigger OnAction()
+                var
+                    NewReservation: Codeunit "CR New Reservation";
                 begin
+
+                    NewReservation.Init(Rec, FromDate, ToDate);
 
                 end;
             }

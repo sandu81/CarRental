@@ -968,6 +968,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Avilable Car List - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 714931653 - Action 1606545787 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Book</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Avilable Car List - Action Book - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 56178819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Brands</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1037,6 +1042,11 @@
           <source>P&amp;ost</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Reservation - Action Post - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3693805923 - Action 2282416948 - Method 1377591017 - NamedType 743877728" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Atleast one of the cars is aqlready booked for the period selected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Reservation - Action Post - Method OnAction - NamedType AlreadyBookedlbl</note>
         </trans-unit>
         <trans-unit id="Page 746380048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Booking Journal Templates</source>

@@ -96,7 +96,28 @@ page 52008 "CR Reservation"
                 Promoted = true;
                 PromotedCategory = Process;
                 ShortcutKey = F9;
-                RunObject = codeunit "CR Reservation-Post (Yes/No)";
+
+                trigger OnAction()
+                var
+                    ReservationPost: Codeunit "CR Reservation-Post (Yes/No)";
+                    CheckAvailability: Codeunit "CR Available Cars-Filter";
+                    ReservationLine: Record "CR Reservation Line";
+                    AlreadyBookedlbl: Label 'Atleast one of the cars is already booked for the period selected.';
+                begin
+
+                    ReservationLine.SetRange("Document No.", Rec."No.");
+
+                    if ReservationLine.FindSet() then begin
+                        repeat
+                            if CheckAvailability.CarAlreadyBooked(ReservationLine."Car No.", ReservationLine."Start Date", ReservationLine."End Date") then
+                                Error(AlreadyBookedlbl);
+
+                        until ReservationLine.Next() = 0
+                    end;
+
+
+                    ReservationPost.Run(Rec);
+                end;
 
             }
         }

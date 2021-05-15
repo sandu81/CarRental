@@ -52,27 +52,27 @@ table 52008 "CR Reservation Line"
             var
                 Car: Record "CR Car";
             begin
-                if "Car No." <> xRec."Car No." then
-                    if "Car No." <> '' then begin
 
-                        CheckAvailability();
+                if "Car No." <> '' then begin
 
-                        Car.GET("Car No.");
+                    CheckAvailability();
 
-                        Car.CalcFields(Year);
+                    Car.GET("Car No.");
 
-                        "Daily Rate" := Car."Daily Rate";
-                        "Car Name" := Car."Name";
-                        "Brand Code" := Car."Brand Code";
-                        "Model Code" := Car."Model Code";
-                        "Year" := Car.Year;
-                        "Doors" := Car.Doors;
-                        "Passengers" := Car.Passengers;
-                        "Baggage" := Car.Baggage;
-                        "Transmission" := Car.Transmission;
-                        "Fuel Type" := Car."Fuel Type";
-                        "Mileage" := Car.Mileage;
-                    end
+                    Car.CalcFields(Year);
+
+                    "Daily Rate" := Car."Daily Rate";
+                    "Car Name" := Car."Name";
+                    "Brand Code" := Car."Brand Code";
+                    "Model Code" := Car."Model Code";
+                    "Year" := Car.Year;
+                    "Doors" := Car.Doors;
+                    "Passengers" := Car.Passengers;
+                    "Baggage" := Car.Baggage;
+                    "Transmission" := Car.Transmission;
+                    "Fuel Type" := Car."Fuel Type";
+                    "Mileage" := Car.Mileage;
+                end
             end;
         }
         field(50; "Daily Rate"; Decimal)
