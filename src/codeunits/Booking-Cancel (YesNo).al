@@ -4,12 +4,6 @@ codeunit 52006 "CR Booking-Cancel (Yes/No)"
 
     trigger OnRun()
     begin
-        RunYesNo(Rec);
-    end;
-
-    procedure RunYesNo(var Rec: Record "CR Posted Booking Header")
-    begin
-
         PostedBookingHeader.COPY(Rec);
         Code;
         Rec := PostedBookingHeader;
@@ -23,7 +17,7 @@ codeunit 52006 "CR Booking-Cancel (Yes/No)"
 
         IF NOT CONFIRM(ConfirmCancellbl, FALSE) THEN
             EXIT;
-        BookingCancel.RunPost(PostedBookingHeader);
+        BookingCancel.Run(PostedBookingHeader);
         COMMIT;
     end;
 

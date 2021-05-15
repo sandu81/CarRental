@@ -3,13 +3,6 @@ codeunit 52005 "CR Booking-Post"
     TableNo = "CR Booking Header";
 
     trigger OnRun()
-    begin
-
-        RunPost(Rec);
-
-    end;
-
-    procedure RunPost(var Rec: Record "CR Booking Header")
     var
         PostedBookingLine: Record "CR Posted Booking Line";
         SourceCodeSetup: Record "Source Code Setup";

@@ -1,8 +1,6 @@
 page 52007 "CR Car Extra Options"
 {
     PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Administration;
     SourceTable = "CR Car Extra Option";
     Caption = 'Car Extra Options';
 

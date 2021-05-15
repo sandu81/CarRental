@@ -3,22 +3,11 @@ codeunit 52007 "CR Booking-Cancel"
     TableNo = "CR Posted Booking Header";
 
     trigger OnRun()
-    begin
-
-        RunPost(Rec);
-
-    end;
-
-    procedure RunPost(var Rec: Record "CR Posted Booking Header")
     var
 
         CancelledBookingLine: Record "CR Posted Booking Line";
-
         SourceCodeSetup: Record "Source Code Setup";
-
         NoSeriesMgt: Codeunit NoSeriesManagement;
-
-
         LineCount: Integer;
     begin
 
@@ -148,36 +137,6 @@ codeunit 52007 "CR Booking-Cancel"
 
             until BookingLedgerEntry.Next() = 0;
         end;
-
-
-
-    end;
-
-    procedure PostBookingJnlLine()
-    var
-        BookingJnlLine: Record "CR Booking Journal Line";
-    begin
-        BookingJnlLine.Init();
-
-        BookingJnlLine."Booking No." := PostedBookingHeader."No.";
-        BookingJnlLine."Posting Date" := PostedBookingHeader."Posting Date";
-        BookingJnlLine."Document Date" := PostedBookingHeader."Document Date";
-        BookingJnlLine."Document No." := CancelledBookingHeader."No.";
-        BookingJnlLine."Customer No." := PostedBookingHeader."Customer No.";
-        BookingJnlLine."Source Code" := SourceCode;
-        //BookingJnlLine."Posting No. Series" := BookingHeader."Posting No. Series";
-        BookingJnlLine.Description := PostedBookingHeader."Customer Name";
-        BookingJnlLine."Is Cancelled" := PostedBookingHeader."Is Cancelled";
-
-        BookingJnlLine."Car No." := PostedBookingLine."Car No.";
-        BookingJnlLine."Start Date" := PostedBookingLine."Start Date";
-        BookingJnlLine."End Date" := PostedBookingLine."End Date";
-        BookingJnlLine.Amount := PostedBookingLine.Amount;
-        BookingJnlLine."Daily Rate" := PostedBookingLine."Daily Rate";
-        BookingJnlLine."No. of Days" := PostedBookingLine."No. of Days";
-
-        BookingJnlPostLine.RunWithCheck(BookingJnlLine);
-
     end;
 
     var

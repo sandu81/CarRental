@@ -104,7 +104,7 @@ page 52020 "CR Avilable Car List"
     {
         area(Processing)
         {
-            action(ActionName)
+            action(Book)
             {
                 ApplicationArea = All;
 

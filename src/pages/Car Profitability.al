@@ -1,8 +1,6 @@
 page 52018 "CR Car Profitability"
 {
     PageType = CardPart;
-    ApplicationArea = All;
-    UsageCategory = Administration;
     SourceTable = "CR Car";
 
     layout

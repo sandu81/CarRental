@@ -1,8 +1,6 @@
 page 52014 "CR Posted Booking Lines"
 {
     PageType = ListPart;
-    ApplicationArea = All;
-    UsageCategory = Administration;
     SourceTable = "CR Posted Booking Line";
     Caption = 'Posted Lines';
     AutoSplitKey = true;

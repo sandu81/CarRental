@@ -953,10 +953,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Cancel (Yes/No) - Method Code - NamedType ConfirmCancellbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 989474167 - Method 3022018771 - NamedType 2088026532" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 989474167 - Method 1665861916 - NamedType 2088026532" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cannot post booking with no vehicles.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Post - Method RunPost - NamedType NoVehicleslbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Booking-Post - Method OnRun - NamedType NoVehicleslbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 2208946911 - Method 3004954119 - NamedType 2397197700" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to post the booking?</source>
@@ -1037,11 +1037,6 @@
           <source>Car List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Car List - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3121609688 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Car List Part</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page CR Car List Part - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4269027038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Types</source>

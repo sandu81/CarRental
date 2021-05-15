@@ -4,12 +4,6 @@ codeunit 52004 "CR Booking-Post (Yes/No)"
 
     trigger OnRun()
     begin
-        RunYesNo(Rec);
-    end;
-
-    procedure RunYesNo(var Rec: Record "CR Booking Header")
-    begin
-
         BookingHeader.COPY(Rec);
         Code;
         Rec := BookingHeader;
@@ -23,7 +17,7 @@ codeunit 52004 "CR Booking-Post (Yes/No)"
 
         IF NOT CONFIRM(ConfirmPostinglbl, FALSE) THEN
             EXIT;
-        BookingPost.RunPost(BookingHeader);
+        BookingPost.Run(BookingHeader);
         COMMIT;
     end;
 
