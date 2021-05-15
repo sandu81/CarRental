@@ -266,7 +266,7 @@ table 52007 "CR Reservation Header"
 
     end;
 
-    procedure AssistEdit(): boolean
+    procedure AssistEdit(Rec: Record "CR Reservation Header"): boolean
     begin
 
         ReservationHeader := Rec;

@@ -15,6 +15,12 @@ page 52008 "CR Reservation"
                 field("No."; "No.")
                 {
                     ApplicationArea = All;
+
+                    trigger OnAssistEdit()
+                    begin
+                        IF AssistEdit(xRec) THEN
+                            CurrPage.UPDATE;
+                    end;
                 }
                 field("Customer No."; "Customer No.")
                 {

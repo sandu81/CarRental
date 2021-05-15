@@ -169,7 +169,7 @@ table 52001 "CR Car"
 
     end;
 
-    procedure AssistEdit(): boolean
+    procedure AssistEdit(Rec: Record "CR Car"): boolean
     var
         Car: Record "CR Car";
     begin

@@ -15,6 +15,12 @@ page 52001 "CR Car Card"
                 field("No."; "No.")
                 {
                     ApplicationArea = All;
+
+                    trigger OnAssistEdit()
+                    begin
+                        IF AssistEdit(xRec) THEN
+                            CurrPage.UPDATE;
+                    end;
                 }
                 field(Name; Name)
                 {
