@@ -27,7 +27,7 @@ codeunit 52009 "CR Available Cars-Filter"
     end;
 
 
-    local procedure CarAlreadyBooked(CarNo: Code[20]; "From Date": Date; "To Date": Date): Boolean
+    procedure CarAlreadyBooked(CarNo: Code[20]; "From Date": Date; "To Date": Date): Boolean
     var
         BookingLedgerEntry: Record "CR Booking Ledger Entry";
 
