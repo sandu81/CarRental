@@ -74,6 +74,10 @@ page 52001 "CR Car Card"
                 {
                     ApplicationArea = All;
                 }
+                field(Blocked; Blocked)
+                {
+                    ApplicationArea = All;
+                }
             }
         }
         area(FactBoxes)

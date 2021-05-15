@@ -51,6 +51,7 @@ table 52008 "CR Reservation Line"
             trigger OnValidate()
             var
                 Car: Record "CR Car";
+                CarBockedlbl: Label 'This car is currently unavailable for reservation.';
             begin
 
                 if "Car No." <> '' then begin
@@ -58,6 +59,9 @@ table 52008 "CR Reservation Line"
                     CheckAvailability();
 
                     Car.GET("Car No.");
+
+                    if Car.Blocked = true then
+                        Error(CarBockedlbl);
 
                     Car.CalcFields(Year);
 

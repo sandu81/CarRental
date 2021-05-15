@@ -116,7 +116,11 @@ page 52020 "CR Avilable Car List"
                 trigger OnAction()
                 var
                     NewReservation: Codeunit "CR New Reservation";
+                    CarBlockedlbl: Label 'This car is currently unavailable for reservation.';
                 begin
+
+                    if Rec.Blocked = true then
+                        Error(CarBlockedlbl);
 
                     NewReservation.Init(Rec, FromDate, ToDate);
 
