@@ -8,7 +8,7 @@
             "server": "http://localhost",
             "serverInstance": "BC140_SFEO",
             "authentication": "Windows",
-            "startupObjectId": 52020,
+            "startupObjectId": 52030,
             "startupObjectType": "Page",
             "breakOnError": true,
             "launchBrowser": true,

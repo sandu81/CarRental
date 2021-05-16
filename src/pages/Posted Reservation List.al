@@ -1,11 +1,13 @@
-page 52012 "CR Reservation Ledger Entries"
+page 52021 "CR Posted Reservation List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "CR Reservation Ledger Entry";
+    SourceTable = "CR Posted Reservation Header";
+    Caption = 'Posted Reservation List';
+    CardPageId = "CR Posted Reservation";
+    SourceTableView = where("Is Cancelled" = const(false));
     Editable = false;
-    Caption = 'Reservation Ledger Entries';
 
     layout
     {
@@ -13,19 +15,7 @@ page 52012 "CR Reservation Ledger Entries"
         {
             repeater(General)
             {
-                field("Posting Date"; "Posting Date")
-                {
-                    ApplicationArea = All;
-                }
-                field("Document No."; "Document No.")
-                {
-                    ApplicationArea = All;
-                }
-                field("Document Date"; "Document Date")
-                {
-                    ApplicationArea = All;
-                }
-                field("Booking No."; "Booking No.")
+                field("No."; "No.")
                 {
                     ApplicationArea = All;
                 }
@@ -33,35 +23,47 @@ page 52012 "CR Reservation Ledger Entries"
                 {
                     ApplicationArea = All;
                 }
-                field("Car No."; "Car No.")
+                field("Document Date"; "Document Date")
                 {
                     ApplicationArea = All;
                 }
-                field("Start Date"; "Start Date")
+                field("Total Price"; "Total Price")
                 {
                     ApplicationArea = All;
                 }
-                field("End Date"; "End Date")
+                field("Customer Name"; "Customer Name")
                 {
                     ApplicationArea = All;
                 }
-                field("Daily Rate"; "Daily Rate")
+                field("Address"; "Address")
                 {
                     ApplicationArea = All;
                 }
-                field("No. of Days"; "No. of Days")
+                field("Address 2"; "Address 2")
                 {
                     ApplicationArea = All;
                 }
-                field("Amount"; "Amount")
+                field("City"; "City")
                 {
                     ApplicationArea = All;
                 }
-                field("Is Cancelled"; "Is Cancelled")
+                field("Post Code"; "Post Code")
                 {
                     ApplicationArea = All;
                 }
-                field("Cancelling Entry No."; "Cancelling Entry No.")
+                field("County"; "County")
+                {
+                    ApplicationArea = All;
+                }
+                field("Country/Region Code"; "Country/Region Code")
+                {
+                    ApplicationArea = All;
+                }
+                field("Phone No."; "Phone No.")
+                {
+                    ApplicationArea = All;
+                }
+                field("E-Mail"; "E-Mail")
                 {
                     ApplicationArea = All;
                 }
@@ -70,4 +72,22 @@ page 52012 "CR Reservation Ledger Entries"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action(ActionName)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+
+                end;
+            }
+        }
+    }
+
+    var
+        myInt: Integer;
 }

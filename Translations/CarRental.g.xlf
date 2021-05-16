@@ -974,7 +974,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit CR Reservation-Post (Yes/No) - Method Code - NamedType ConfirmPostinglbl</note>
         </trans-unit>
         <trans-unit id="Page 714931653 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Cars</source>
+          <source>Car Availability</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Avilable Car List - Property Caption</note>
         </trans-unit>
@@ -992,6 +992,11 @@
           <source>Brands</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Brands - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1087947036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancelled Reservation List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Cancelled Reservation List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1466846369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Booking Setup</source>
@@ -1028,6 +1033,76 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Extra Options - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3680376474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Rental Home</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 3797419304 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action New Reservation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 3906826120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profitability</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Profitability - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 3053737007 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Documents</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action PostedDocuments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 3768875250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Ledgers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 434168058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Regisers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 2278434717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reservations</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Reservations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 4069904181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancelled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Cancelled - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 4141588837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirmed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Confirmed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 2187522416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tentative</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Tentative - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 698539839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Settings - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 1490175380 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Brands</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Brands - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 336857349 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cars</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action Cars - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3680376474 - Action 2306012540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Types</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Home - Action CarType - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 173834335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Models</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1047,6 +1122,11 @@
           <source>Posted Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Posted Reservation Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3294047622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Reservation List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Posted Reservation List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3693805923 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reservations</source>
@@ -1087,6 +1167,11 @@
           <source>Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CR Reservation Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1514175373 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reservation List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CR Reservation List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 892805869 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reservation Registers</source>

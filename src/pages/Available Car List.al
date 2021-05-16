@@ -4,7 +4,8 @@ page 52020 "CR Avilable Car List"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CR Car";
-    Caption = 'Cars';
+    Caption = 'Car Availability';
+
 
     layout
     {

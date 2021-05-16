@@ -5,7 +5,7 @@ page 52011 "CR Posted Reservation"
     UsageCategory = Administration;
     SourceTable = "CR Posted Reservation Header";
     Caption = 'Posted Reservation';
-    //Editable = false;
+    Editable = false;
 
     layout
     {
