@@ -14,6 +14,7 @@ report 52000 "CR Car Profitability"
         dataitem(Car; "CR Car")
         {
             RequestFilterFields = "No.", "From Date";
+            DataItemTableView = sorting("Total Revenue") order(descending);
             column(Car_No; "No.")
             {
             }
