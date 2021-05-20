@@ -140,7 +140,7 @@ table 52001 "CR Car"
         {
             Caption = 'Total Revenue';
             FieldClass = FlowField;
-            CalcFormula = Sum("CR Reservation Ledger Entry".Amount where("Car No." = field("No."), "Start Date" = field("From Date"), "Is Cancelled" = const(false)));
+            CalcFormula = Sum("CR Reservation Ledger Entry".Amount where("Car No." = field("No."), "Start Date" = field("From Date")));
         }
         field(190; "From Date"; Date)
         {
